@@ -248,7 +248,7 @@ class DartsApp(App):
     def build(self):
         
         game = DartsGame()
-        self.title = 'DartsGenious'
+        self.title = 'DartsGenius'
         Clock.schedule_interval(self.updateSM, 1 / 60.)
         
         return game
