@@ -1,0 +1,1671 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.1" />
+<title>game API documentation</title>
+<meta name="description" content="Created on Mar 24, 2020 …" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>game</code></h1>
+</header>
+<section id="section-intro">
+<p>Created on Mar 24, 2020</p>
+<p>@author: delpi</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#39;&#39;&#39;
+Created on Mar 24, 2020
+
+@author: delpi
+&#39;&#39;&#39;
+
+import copy
+import datetime as dt
+
+profileTemp = {
+&#34;Name&#34; : &#34;Template_Profile&#34;,
+&#34;Games&#34; : {
+    &#34;X01&#34; : [],
+    &#34;Cricket&#34; : [],
+    &#34;Bobs27&#34; : [],
+    &#34;Sector&#34; : [] 
+    },
+&#34;Stats&#34; : {
+    &#34;X01&#34; : {
+        &#34;DartsThrown&#34; : 0,
+        &#34;DartsForCheckout&#34; : 0,
+        &#34;GamesPlayed&#34; : 0,
+        &#34;GamesWon&#34; : 0,
+        &#34;LegsPlayed&#34; : 0,
+        &#34;LegsWon&#34; : 0,
+        &#34;60+&#34; : 0,
+        &#34;100+&#34; : 0,
+        &#34;140+&#34; : 0,
+        &#34;180&#34; : 0,
+        &#34;OverallAvg&#34; : 0,
+        &#34;First9Avg&#34; : 0,
+        &#34;BestGameAvg&#34; : 0,
+        &#34;BestLegAvg&#34; : 0,
+        &#34;OverallSectorStats&#34; : {
+        },
+        &#34;OverallDartStats&#34; : {
+        },
+        &#34;OverallRoundStats&#34; : {
+        }
+        }
+    }
+}
+
+gameTemp = {
+    &#34;ID&#34; : &#34;&#34;,
+    &#34;DateTime&#34; : &#34;&#34;,
+    &#34;Players&#34; : [],
+    &#34;GameType&#34; : &#34;&#34;,
+    &#34;Winner&#34; : &#34;&#34;,
+    &#34;PlayerAVG&#34; : [],
+    &#34;PlayByPlay&#34; : []
+    }
+
+legTemp = {
+    &#34;Leg&#34; : &#34;&#34;,
+    &#34;Winner&#34; : &#34;&#34;,
+    &#34;RoundsInLeg&#34; : 0,
+    &#34;StarterOfLeg&#34;: &#34;&#34;,
+    &#34;PbP&#34; : []
+    }
+
+class Game():
+    
+    
+    def __init__(self, playerList, gameType, numOfSets, numOfLegs, gameID):
+        
+        self.possibleGameStates = [&#34;GameOn&#34;, &#34;GameEnd&#34;, &#34;DBCopiedAfterGameEnd&#34;]
+        self.gameState = &#34;GameOn&#34;
+        self.gameType = gameType
+        self.numOfLegs = numOfLegs
+        self.numOfSets = numOfSets
+        self.playerList = playerList
+        self.gameID = &#34;ID_{}&#34;.format(str(int(gameID)))
+        self.numPlayers = len(self.playerList)
+        
+        self.currRound = 1
+        self.currSet = 1
+        self.currLeg = 1
+        self.currDart = 1
+        self.currPlayerIndex = 0
+        self.currStarterIndex = 0
+        
+        self.currRoundPbP = []
+        self.currLegPbP = []
+        
+        self.gameStats = copy.deepcopy(gameTemp)
+        self.gameStats[&#34;ID&#34;] = self.gameID
+        self.gameStats[&#34;DateTime&#34;] = dt.datetime.now().strftime(&#34;%Y.%m.%d %H:%M:%S&#34;)
+        self.gameStats[&#34;GameType&#34;] = &#34;{}_S{}_L{}&#34;.format(self.gameType,int(self.numOfSets),int(self.numOfLegs))
+        for player in self.playerList:
+            self.gameStats[&#34;Players&#34;].append(player.name)
+        
+        self.legStats = copy.deepcopy(legTemp)
+        
+        self.waitForConfirm = &#39;NoConfirmNeeded&#39;
+        
+        
+    def pushForwardGame(self, scoreToAdd, sect):
+        if self.gameType == &#39;501&#39;:
+            
+            if self.gameState == &#34;GameOn&#34; and self.waitForConfirm == &#39;NoConfirmNeeded&#39;:
+                
+                if self.currDart &lt;= 3:
+                    
+                    throwResult = self.checkRule(scoreToAdd, sect)
+                    
+                    if throwResult == &#39;Normal&#39;:
+                    
+                        self.currDart += 1
+                        
+                        if (self.currDart &gt; 3):
+                            self.currDart = 3
+                            self.waitForConfirm = &#39;Normal&#39;
+                        else:
+                            pass
+                        
+                    elif throwResult == &#39;Bust&#39;:
+                        self.waitForConfirm = &#39;Bust&#39;
+                        
+                    else: #win
+                        self.waitForConfirm = &#39;Win&#39;
+
+                        
+                    
+    def nextPlayer(self):
+        self.currPlayerIndex += 1
+        self.currDart = 1
+        if self.currPlayerIndex &gt; self.numPlayers-1:
+            self.currPlayerIndex = 0
+            
+        if self.currPlayerIndex == self.currStarterIndex:
+            self.currRound += 1
+            self.currLegPbP.append(copy.deepcopy(self.currRoundPbP))
+            self.currRoundPbP.clear()
+            
+    def nextLeg(self):
+        if self.gameType == &#39;501&#39;:
+            
+            self.currLegPbP.append(copy.deepcopy(self.currRoundPbP))
+            self.appendGameLegStats()
+            self.currRoundPbP.clear()
+            self.currLegPbP.clear()
+            
+            self.currRound = 1
+            self.currDart = 1
+            self.currLeg += 1
+            self.resetAllPlayersScore()
+            
+            self.playerList[self.currPlayerIndex].legsWon += 1
+            
+            for index in range(self.numPlayers):
+                if index == self.currPlayerIndex:
+                    self.playerList[index].legUpdateStats(True)
+                else:
+                    self.playerList[index].legUpdateStats(False)    
+                self.playerList[index].legAvg = 0
+                self.playerList[index].legDT = 0
+                
+            if self.playerList[self.currPlayerIndex].legsWon == self.numOfLegs:
+                
+                self.resetAllPlayersLegs()
+                
+                self.playerList[self.currPlayerIndex].setsWon += 1
+                self.currSet += 1
+                print(&#39;WINNER of Set is {}&#39;.format(self.playerList[self.currPlayerIndex].name ))
+                
+                if self.playerList[self.currPlayerIndex].setsWon == self.numOfSets:
+                    print(&#39;WINNER of Game is {}&#39;.format(self.playerList[self.currPlayerIndex].name ))
+                    
+                    for index in range(self.numPlayers):
+                        if index == self.currPlayerIndex:
+                            self.playerList[index].gameUpdateStats(True)
+                        else:
+                            self.playerList[index].gameUpdateStats(False)    
+                        
+                        self.playerList[index].updatePlayerDB(self.gameID)
+                        
+                    self.finalizeGameStats(self.playerList[self.currPlayerIndex].name )
+                    self.gameState = &#39;GameEnd&#39;
+                    
+            self.updateStarterOfLeg()
+    
+    def resetAllPlayersScore(self):
+        for player in self.playerList:
+            player.gameScore += player.currentScoreToShow
+            player.currentScore = 0
+            player.currentScoreToShow = 0
+            player.flushScore()
+     
+    def resetAllPlayersLegs(self):
+        for player in self.playerList:
+            player.legsWon = 0   
+        self.currLeg = 1  
+    
+    def updateStarterOfLeg(self):
+        self.currStarterIndex +=1 
+                    
+        if self.currStarterIndex == self.numPlayers:
+            self.currStarterIndex = 0
+        
+        self.currPlayerIndex = self.currStarterIndex
+        
+            
+    def checkRule(self, scoreToAdd,sector):
+        
+        self.playerList[self.currPlayerIndex].currentRoundScore.append(scoreToAdd)
+        self.playerList[self.currPlayerIndex].currentRoundSectorScore.append(sector)
+        self.playerList[self.currPlayerIndex].currentScoreToShow += scoreToAdd        
+        if self.gameType == &#39;501&#39;:
+            if self.playerList[self.currPlayerIndex].currentScoreToShow &gt; 501 or self.playerList[self.currPlayerIndex].currentScoreToShow == 500:
+                
+                for ind in range(len(self.playerList[self.currPlayerIndex].currentRoundSectorScore)):
+                    self.playerList[self.currPlayerIndex].currentRoundSectorScore[ind] = &#39;M&#39;
+                    self.playerList[self.currPlayerIndex].currentRoundScore[ind] = 0
+                print(&#39;BUST - to much &#39;)
+                return &#39;Bust&#39;
+            else:
+                
+                print(&#39;Player is {}, dart {} in round {}, leg {}, set {}, score: {}, {}&#39;.format(self.playerList[self.currPlayerIndex].name, \
+                                                                self.currDart, self.currRound, self.currLeg, self.currSet, scoreToAdd,\
+                                                                self.playerList[self.currPlayerIndex].currentScoreToShow))
+    
+                
+                if self.playerList[self.currPlayerIndex].currentScoreToShow == 501:
+                    
+                    if &#39;D&#39; in sector:
+                        print(&#39;WINNER of Leg is {}&#39;.format(self.playerList[self.currPlayerIndex].name ))
+                        return &#39;Win&#39;
+                    else:
+                        for ind in range(len(self.playerList[self.currPlayerIndex].currentRoundSectorScore)):
+                            self.playerList[self.currPlayerIndex].currentRoundSectorScore[ind] = &#39;M&#39;
+                            self.playerList[self.currPlayerIndex].currentRoundScore[ind] = 0
+                        print(&#39;BUST - Not double&#39;)
+                        return &#39;Bust&#39;
+                
+                else:
+                    return &#39;Normal&#39;
+                    
+           
+    def undoLastThrow(self):
+        
+        if self.waitForConfirm == &#39;NoConfirmNeeded&#39;:
+            if self.currDart &gt; 1:
+                self.currDart -= 1
+                scoreToUndo = self.playerList[self.currPlayerIndex].currentRoundScore.pop()
+                self.playerList[self.currPlayerIndex].currentRoundSectorScore.pop()
+                self.playerList[self.currPlayerIndex].currentScoreToShow -= scoreToUndo
+    
+        else:
+            scoreToUndo = self.playerList[self.currPlayerIndex].currentRoundScore.pop()
+            self.playerList[self.currPlayerIndex].currentRoundSectorScore.pop()
+            self.playerList[self.currPlayerIndex].currentScoreToShow -= scoreToUndo
+            self.waitForConfirm = &#39;NoConfirmNeeded&#39;
+
+        
+    def confirmThrow(self):      
+        
+        self.playerList[self.currPlayerIndex].roundUpdateStats(self.waitForConfirm, self.currDart) 
+        self.currRoundPbP.append(self.playerList[self.currPlayerIndex].currentRoundSectorScore)
+        
+        if self.waitForConfirm == &#39;Normal&#39;:
+            self.playerList[self.currPlayerIndex].currentScore += self.playerList[self.currPlayerIndex].flushScore()
+            self.playerList[self.currPlayerIndex].currentScoreToShow = self.playerList[self.currPlayerIndex].currentScore
+            self.playerList[self.currPlayerIndex].checkRoundForCheckout()
+            self.playerList[self.currPlayerIndex].legDT += 3
+            self.playerList[self.currPlayerIndex].legAvg = self.playerList[self.currPlayerIndex].currentScore / self.playerList[self.currPlayerIndex].legDT
+            self.playerList[self.currPlayerIndex].gameDT += 3
+            self.playerList[self.currPlayerIndex].gameAvg = (self.playerList[self.currPlayerIndex].gameScore + self.playerList[self.currPlayerIndex].currentScore )/ self.playerList[self.currPlayerIndex].gameDT
+            self.nextPlayer()
+
+            
+        elif self.waitForConfirm == &#39;Bust&#39;:
+            self.playerList[self.currPlayerIndex].flushScore()
+            self.playerList[self.currPlayerIndex].legDT += self.currDart
+            self.playerList[self.currPlayerIndex].legAvg = self.playerList[self.currPlayerIndex].currentScore / self.playerList[self.currPlayerIndex].legDT
+            self.playerList[self.currPlayerIndex].gameDT += self.currDart
+            self.playerList[self.currPlayerIndex].gameAvg = (self.playerList[self.currPlayerIndex].gameScore + self.playerList[self.currPlayerIndex].currentScore )/ self.playerList[self.currPlayerIndex].gameDT
+            self.nextPlayer()
+            
+        elif self.waitForConfirm == &#39;Win&#39;:        
+              
+            self.playerList[self.currPlayerIndex].checkRoundForCheckout()
+            self.playerList[self.currPlayerIndex].legDT += self.currDart
+            self.playerList[self.currPlayerIndex].legAvg = 501 / self.playerList[self.currPlayerIndex].legDT
+            self.playerList[self.currPlayerIndex].gameDT += self.currDart
+            self.playerList[self.currPlayerIndex].gameAvg = (self.playerList[self.currPlayerIndex].gameScore + 501 )/ self.playerList[self.currPlayerIndex].gameDT
+            
+            self.nextLeg()
+            self.playerList[self.currPlayerIndex].flushScore()
+        
+        self.waitForConfirm = &#39;NoConfirmNeeded&#39;
+    
+    def appendGameLegStats(self):
+        
+        self.legStats[&#34;Leg&#34;] = &#34;S{}_L{}&#34;.format(int(self.currSet),int(self.currLeg))
+        self.legStats[&#34;Winner&#34;] = self.playerList[self.currPlayerIndex].name
+        self.legStats[&#34;RoundsInLeg&#34;] = self.currRound
+        self.legStats[&#34;StarterOfLeg&#34;] = self.playerList[self.currStarterIndex].name
+        self.legStats[&#34;PbP&#34;] =  self.currLegPbP
+        
+        self.gameStats[&#34;PlayByPlay&#34;].append(copy.deepcopy(self.legStats))
+    
+    def finalizeGameStats(self,winner):
+        
+        gameAvg = []
+        
+        for player in self.playerList:
+            playerAvg = []
+            playerAvg.append(player.playerCurrentStats[&#39;X01&#39;][&#39;First9Avg&#39;])
+            playerAvg.append(player.playerCurrentStats[&#39;X01&#39;][&#39;OverallAvg&#39;])
+            gameAvg.append(playerAvg)
+        
+        self.gameStats[&#34;PlayerAVG&#34;] = gameAvg
+        self.gameStats[&#34;Winner&#34;] = winner
+        
+class Player():
+
+    
+    def __init__(self, playerProfile):
+            self.playerDB = playerProfile
+            self.playerCurrentStats = copy.deepcopy(profileTemp[&#39;Stats&#39;])
+            self.name = playerProfile[&#39;Name&#39;]
+            
+            self.currentScore = 0
+            self.gameScore = 0
+            self.currentScoreToShow = 0
+            self.isRoundForCheckout = False
+            self.currentRoundScore = []
+            self.currentRoundSectorScore = []
+            self.legsWon = 0
+            self.setsWon = 0
+            
+            self.legAvg = 0
+            self.legDT = 0
+            self.gameAvg = 0
+            self.gameDT = 0
+            self.totalScore = 0
+            self.totalF9Score = 0
+            self.totalF9DT = 0
+    
+    def roundUpdateStats(self, confirmType, dart):  
+        
+        #Darts Thrown, Darts For Checkout
+        roundSum = 0
+        for dartScore in self.currentRoundScore:
+            roundSum += dartScore
+            
+        if confirmType == &#39;Normal&#39;:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;] += 3 
+            if self.isRoundForCheckout:
+                self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;] += 3 
+        elif confirmType == &#39;Bust&#39;:
+            roundSum = 0
+            self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;] += dart
+            if self.isRoundForCheckout:
+                self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;] += dart 
+        elif confirmType == &#39;Win&#39;:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;] += dart
+            if self.isRoundForCheckout:
+                self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;] += dart 
+        else:
+            pass
+    
+    
+        #60+, 100+, 140+, 180
+        if roundSum == 180:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;180&#39;] += 1
+        elif roundSum &gt;= 140:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;140+&#39;] += 1
+        elif roundSum &gt;= 100:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;100+&#39;] += 1
+        elif roundSum &gt;= 60:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;60+&#39;] += 1
+        else:
+            pass
+        
+        # Overall Avg, First 9 Avg  
+        if (self.legDT + dart) &lt;= 9:
+            self.totalF9Score += roundSum
+            self.totalF9DT += 3
+            self.playerCurrentStats[&#39;X01&#39;][&#39;First9Avg&#39;] = self.totalF9Score / self.totalF9DT
+        
+        self.totalScore += roundSum
+        self.playerCurrentStats[&#39;X01&#39;][&#39;OverallAvg&#39;] = self.totalScore / self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;]
+        
+        
+        
+        # OverallSectorStats
+        for sect in self.currentRoundSectorScore:
+            if str(sect) in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;].keys():
+                self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][str(sect)] += 1
+            else: 
+                self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][str(sect)] = 1
+        
+        # OverallDartStats  
+        for dart in self.currentRoundScore:
+            if str(dart) in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;].keys():
+                self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][str(dart)] += 1
+            else: 
+                self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][str(dart)] = 1
+            
+        # OverallRoundStats
+        if str(roundSum) in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;].keys():
+            self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][str(roundSum)] += 1
+        else: 
+            self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][str(roundSum)] = 1 
+               
+    def checkRoundForCheckout(self):
+        if (self.currentScore &gt;= 331) and (self.currentScore not in [332,333,335,336,338,339,342]):
+            self.isRoundForCheckout = True
+        else:
+            self.isRoundForCheckout = False
+    
+    def legUpdateStats(self, isWon):
+        
+        # legsPlayed, legsWon, bestLegAvg
+        
+        self.playerCurrentStats[&#39;X01&#39;][&#39;LegsPlayed&#39;] += 1
+        
+        if isWon:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;LegsWon&#39;] += 1
+        else:
+            pass
+        
+        if self.legAvg &gt; self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;]:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;] = self.legAvg
+        
+    
+    def gameUpdateStats(self,isWon):
+        
+        #gamesPlayed
+        self.playerCurrentStats[&#39;X01&#39;][&#39;GamesPlayed&#39;] += 1
+        
+        #GamesWon
+        if isWon:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;GamesWon&#39;] += 1
+        else:
+            pass
+        
+        #bestGameAvg
+        if self.gameAvg &gt; self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;]:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;] = self.gameAvg 
+    
+    def updatePlayerDB(self,gameID):
+        
+        oldDT = self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsThrown&#39;]
+        oldDTf9 = self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;LegsPlayed&#39;] * 9
+        
+        #Add game ID
+        self.playerDB[&#39;Games&#39;][&#39;X01&#39;].append(gameID)
+        
+        #DT
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsThrown&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;]
+        
+        #DT for Checkout
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsForCheckout&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;]
+        
+        #GamesPlayed
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;GamesPlayed&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;GamesPlayed&#39;]
+        
+        #GamesWon
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;GamesWon&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;GamesWon&#39;]
+        
+        #LegsPlayed
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;LegsPlayed&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;LegsPlayed&#39;]
+        
+        #LegsWon
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;LegsWon&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;LegsWon&#39;]
+        
+        #60+, 100+, 140+, 180
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;60+&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;60+&#39;]
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;100+&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;100+&#39;]
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;140+&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;140+&#39;]
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;180&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;180&#39;]
+        
+        #OverallAvg
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallAvg&#39;] = (self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallAvg&#39;] * oldDT + self.gameScore) / self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsThrown&#39;]
+        
+        #First9Avg
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;First9Avg&#39;] = (self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;First9Avg&#39;] * oldDTf9 + self.totalF9Score) / (oldDTf9 + self.totalF9DT)
+        
+        #BestGameAvg
+        if self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;] &gt; self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestGameAvg&#39;]:
+            self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestGameAvg&#39;] = self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;]
+            
+        #BestLegAvg
+        if self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;] &gt; self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestLegAvg&#39;]:
+            self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestLegAvg&#39;] = self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;]
+            
+            
+        #OverallSectorStats
+        
+        for sectorStat in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;].keys():
+            if sectorStat in self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallSectorStats&#39;]:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat] += self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat]
+            else:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat] = self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat]
+                
+        #OverallDartStats
+        for dartStat in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;].keys():
+            if dartStat in self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;]:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat] += self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat]
+            else:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat] = self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat]
+        
+        #OverallRoundStats
+        for roundStat in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;].keys():
+            if roundStat in self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallRoundStats&#39;]:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat] += self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat]
+            else:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat] = self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat]
+        
+            
+    def flushScore(self):
+        roundSum = 0
+        
+        for scr in self.currentRoundScore:
+            roundSum += scr
+            
+        self.currentRoundScore = []
+        self.currentRoundSectorScore = []
+        self.currentScoreToShow = self.currentScore
+        return roundSum
+    
+    
+    </code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="game.Game"><code class="flex name class">
+<span>class <span class="ident">Game</span></span>
+<span>(</span><span>playerList, gameType, numOfSets, numOfLegs, gameID)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Game():
+    
+    
+    def __init__(self, playerList, gameType, numOfSets, numOfLegs, gameID):
+        
+        self.possibleGameStates = [&#34;GameOn&#34;, &#34;GameEnd&#34;, &#34;DBCopiedAfterGameEnd&#34;]
+        self.gameState = &#34;GameOn&#34;
+        self.gameType = gameType
+        self.numOfLegs = numOfLegs
+        self.numOfSets = numOfSets
+        self.playerList = playerList
+        self.gameID = &#34;ID_{}&#34;.format(str(int(gameID)))
+        self.numPlayers = len(self.playerList)
+        
+        self.currRound = 1
+        self.currSet = 1
+        self.currLeg = 1
+        self.currDart = 1
+        self.currPlayerIndex = 0
+        self.currStarterIndex = 0
+        
+        self.currRoundPbP = []
+        self.currLegPbP = []
+        
+        self.gameStats = copy.deepcopy(gameTemp)
+        self.gameStats[&#34;ID&#34;] = self.gameID
+        self.gameStats[&#34;DateTime&#34;] = dt.datetime.now().strftime(&#34;%Y.%m.%d %H:%M:%S&#34;)
+        self.gameStats[&#34;GameType&#34;] = &#34;{}_S{}_L{}&#34;.format(self.gameType,int(self.numOfSets),int(self.numOfLegs))
+        for player in self.playerList:
+            self.gameStats[&#34;Players&#34;].append(player.name)
+        
+        self.legStats = copy.deepcopy(legTemp)
+        
+        self.waitForConfirm = &#39;NoConfirmNeeded&#39;
+        
+        
+    def pushForwardGame(self, scoreToAdd, sect):
+        if self.gameType == &#39;501&#39;:
+            
+            if self.gameState == &#34;GameOn&#34; and self.waitForConfirm == &#39;NoConfirmNeeded&#39;:
+                
+                if self.currDart &lt;= 3:
+                    
+                    throwResult = self.checkRule(scoreToAdd, sect)
+                    
+                    if throwResult == &#39;Normal&#39;:
+                    
+                        self.currDart += 1
+                        
+                        if (self.currDart &gt; 3):
+                            self.currDart = 3
+                            self.waitForConfirm = &#39;Normal&#39;
+                        else:
+                            pass
+                        
+                    elif throwResult == &#39;Bust&#39;:
+                        self.waitForConfirm = &#39;Bust&#39;
+                        
+                    else: #win
+                        self.waitForConfirm = &#39;Win&#39;
+
+                        
+                    
+    def nextPlayer(self):
+        self.currPlayerIndex += 1
+        self.currDart = 1
+        if self.currPlayerIndex &gt; self.numPlayers-1:
+            self.currPlayerIndex = 0
+            
+        if self.currPlayerIndex == self.currStarterIndex:
+            self.currRound += 1
+            self.currLegPbP.append(copy.deepcopy(self.currRoundPbP))
+            self.currRoundPbP.clear()
+            
+    def nextLeg(self):
+        if self.gameType == &#39;501&#39;:
+            
+            self.currLegPbP.append(copy.deepcopy(self.currRoundPbP))
+            self.appendGameLegStats()
+            self.currRoundPbP.clear()
+            self.currLegPbP.clear()
+            
+            self.currRound = 1
+            self.currDart = 1
+            self.currLeg += 1
+            self.resetAllPlayersScore()
+            
+            self.playerList[self.currPlayerIndex].legsWon += 1
+            
+            for index in range(self.numPlayers):
+                if index == self.currPlayerIndex:
+                    self.playerList[index].legUpdateStats(True)
+                else:
+                    self.playerList[index].legUpdateStats(False)    
+                self.playerList[index].legAvg = 0
+                self.playerList[index].legDT = 0
+                
+            if self.playerList[self.currPlayerIndex].legsWon == self.numOfLegs:
+                
+                self.resetAllPlayersLegs()
+                
+                self.playerList[self.currPlayerIndex].setsWon += 1
+                self.currSet += 1
+                print(&#39;WINNER of Set is {}&#39;.format(self.playerList[self.currPlayerIndex].name ))
+                
+                if self.playerList[self.currPlayerIndex].setsWon == self.numOfSets:
+                    print(&#39;WINNER of Game is {}&#39;.format(self.playerList[self.currPlayerIndex].name ))
+                    
+                    for index in range(self.numPlayers):
+                        if index == self.currPlayerIndex:
+                            self.playerList[index].gameUpdateStats(True)
+                        else:
+                            self.playerList[index].gameUpdateStats(False)    
+                        
+                        self.playerList[index].updatePlayerDB(self.gameID)
+                        
+                    self.finalizeGameStats(self.playerList[self.currPlayerIndex].name )
+                    self.gameState = &#39;GameEnd&#39;
+                    
+            self.updateStarterOfLeg()
+    
+    def resetAllPlayersScore(self):
+        for player in self.playerList:
+            player.gameScore += player.currentScoreToShow
+            player.currentScore = 0
+            player.currentScoreToShow = 0
+            player.flushScore()
+     
+    def resetAllPlayersLegs(self):
+        for player in self.playerList:
+            player.legsWon = 0   
+        self.currLeg = 1  
+    
+    def updateStarterOfLeg(self):
+        self.currStarterIndex +=1 
+                    
+        if self.currStarterIndex == self.numPlayers:
+            self.currStarterIndex = 0
+        
+        self.currPlayerIndex = self.currStarterIndex
+        
+            
+    def checkRule(self, scoreToAdd,sector):
+        
+        self.playerList[self.currPlayerIndex].currentRoundScore.append(scoreToAdd)
+        self.playerList[self.currPlayerIndex].currentRoundSectorScore.append(sector)
+        self.playerList[self.currPlayerIndex].currentScoreToShow += scoreToAdd        
+        if self.gameType == &#39;501&#39;:
+            if self.playerList[self.currPlayerIndex].currentScoreToShow &gt; 501 or self.playerList[self.currPlayerIndex].currentScoreToShow == 500:
+                
+                for ind in range(len(self.playerList[self.currPlayerIndex].currentRoundSectorScore)):
+                    self.playerList[self.currPlayerIndex].currentRoundSectorScore[ind] = &#39;M&#39;
+                    self.playerList[self.currPlayerIndex].currentRoundScore[ind] = 0
+                print(&#39;BUST - to much &#39;)
+                return &#39;Bust&#39;
+            else:
+                
+                print(&#39;Player is {}, dart {} in round {}, leg {}, set {}, score: {}, {}&#39;.format(self.playerList[self.currPlayerIndex].name, \
+                                                                self.currDart, self.currRound, self.currLeg, self.currSet, scoreToAdd,\
+                                                                self.playerList[self.currPlayerIndex].currentScoreToShow))
+    
+                
+                if self.playerList[self.currPlayerIndex].currentScoreToShow == 501:
+                    
+                    if &#39;D&#39; in sector:
+                        print(&#39;WINNER of Leg is {}&#39;.format(self.playerList[self.currPlayerIndex].name ))
+                        return &#39;Win&#39;
+                    else:
+                        for ind in range(len(self.playerList[self.currPlayerIndex].currentRoundSectorScore)):
+                            self.playerList[self.currPlayerIndex].currentRoundSectorScore[ind] = &#39;M&#39;
+                            self.playerList[self.currPlayerIndex].currentRoundScore[ind] = 0
+                        print(&#39;BUST - Not double&#39;)
+                        return &#39;Bust&#39;
+                
+                else:
+                    return &#39;Normal&#39;
+                    
+           
+    def undoLastThrow(self):
+        
+        if self.waitForConfirm == &#39;NoConfirmNeeded&#39;:
+            if self.currDart &gt; 1:
+                self.currDart -= 1
+                scoreToUndo = self.playerList[self.currPlayerIndex].currentRoundScore.pop()
+                self.playerList[self.currPlayerIndex].currentRoundSectorScore.pop()
+                self.playerList[self.currPlayerIndex].currentScoreToShow -= scoreToUndo
+    
+        else:
+            scoreToUndo = self.playerList[self.currPlayerIndex].currentRoundScore.pop()
+            self.playerList[self.currPlayerIndex].currentRoundSectorScore.pop()
+            self.playerList[self.currPlayerIndex].currentScoreToShow -= scoreToUndo
+            self.waitForConfirm = &#39;NoConfirmNeeded&#39;
+
+        
+    def confirmThrow(self):      
+        
+        self.playerList[self.currPlayerIndex].roundUpdateStats(self.waitForConfirm, self.currDart) 
+        self.currRoundPbP.append(self.playerList[self.currPlayerIndex].currentRoundSectorScore)
+        
+        if self.waitForConfirm == &#39;Normal&#39;:
+            self.playerList[self.currPlayerIndex].currentScore += self.playerList[self.currPlayerIndex].flushScore()
+            self.playerList[self.currPlayerIndex].currentScoreToShow = self.playerList[self.currPlayerIndex].currentScore
+            self.playerList[self.currPlayerIndex].checkRoundForCheckout()
+            self.playerList[self.currPlayerIndex].legDT += 3
+            self.playerList[self.currPlayerIndex].legAvg = self.playerList[self.currPlayerIndex].currentScore / self.playerList[self.currPlayerIndex].legDT
+            self.playerList[self.currPlayerIndex].gameDT += 3
+            self.playerList[self.currPlayerIndex].gameAvg = (self.playerList[self.currPlayerIndex].gameScore + self.playerList[self.currPlayerIndex].currentScore )/ self.playerList[self.currPlayerIndex].gameDT
+            self.nextPlayer()
+
+            
+        elif self.waitForConfirm == &#39;Bust&#39;:
+            self.playerList[self.currPlayerIndex].flushScore()
+            self.playerList[self.currPlayerIndex].legDT += self.currDart
+            self.playerList[self.currPlayerIndex].legAvg = self.playerList[self.currPlayerIndex].currentScore / self.playerList[self.currPlayerIndex].legDT
+            self.playerList[self.currPlayerIndex].gameDT += self.currDart
+            self.playerList[self.currPlayerIndex].gameAvg = (self.playerList[self.currPlayerIndex].gameScore + self.playerList[self.currPlayerIndex].currentScore )/ self.playerList[self.currPlayerIndex].gameDT
+            self.nextPlayer()
+            
+        elif self.waitForConfirm == &#39;Win&#39;:        
+              
+            self.playerList[self.currPlayerIndex].checkRoundForCheckout()
+            self.playerList[self.currPlayerIndex].legDT += self.currDart
+            self.playerList[self.currPlayerIndex].legAvg = 501 / self.playerList[self.currPlayerIndex].legDT
+            self.playerList[self.currPlayerIndex].gameDT += self.currDart
+            self.playerList[self.currPlayerIndex].gameAvg = (self.playerList[self.currPlayerIndex].gameScore + 501 )/ self.playerList[self.currPlayerIndex].gameDT
+            
+            self.nextLeg()
+            self.playerList[self.currPlayerIndex].flushScore()
+        
+        self.waitForConfirm = &#39;NoConfirmNeeded&#39;
+    
+    def appendGameLegStats(self):
+        
+        self.legStats[&#34;Leg&#34;] = &#34;S{}_L{}&#34;.format(int(self.currSet),int(self.currLeg))
+        self.legStats[&#34;Winner&#34;] = self.playerList[self.currPlayerIndex].name
+        self.legStats[&#34;RoundsInLeg&#34;] = self.currRound
+        self.legStats[&#34;StarterOfLeg&#34;] = self.playerList[self.currStarterIndex].name
+        self.legStats[&#34;PbP&#34;] =  self.currLegPbP
+        
+        self.gameStats[&#34;PlayByPlay&#34;].append(copy.deepcopy(self.legStats))
+    
+    def finalizeGameStats(self,winner):
+        
+        gameAvg = []
+        
+        for player in self.playerList:
+            playerAvg = []
+            playerAvg.append(player.playerCurrentStats[&#39;X01&#39;][&#39;First9Avg&#39;])
+            playerAvg.append(player.playerCurrentStats[&#39;X01&#39;][&#39;OverallAvg&#39;])
+            gameAvg.append(playerAvg)
+        
+        self.gameStats[&#34;PlayerAVG&#34;] = gameAvg
+        self.gameStats[&#34;Winner&#34;] = winner</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="game.Game.appendGameLegStats"><code class="name flex">
+<span>def <span class="ident">appendGameLegStats</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def appendGameLegStats(self):
+    
+    self.legStats[&#34;Leg&#34;] = &#34;S{}_L{}&#34;.format(int(self.currSet),int(self.currLeg))
+    self.legStats[&#34;Winner&#34;] = self.playerList[self.currPlayerIndex].name
+    self.legStats[&#34;RoundsInLeg&#34;] = self.currRound
+    self.legStats[&#34;StarterOfLeg&#34;] = self.playerList[self.currStarterIndex].name
+    self.legStats[&#34;PbP&#34;] =  self.currLegPbP
+    
+    self.gameStats[&#34;PlayByPlay&#34;].append(copy.deepcopy(self.legStats))</code></pre>
+</details>
+</dd>
+<dt id="game.Game.checkRule"><code class="name flex">
+<span>def <span class="ident">checkRule</span></span>(<span>self, scoreToAdd, sector)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def checkRule(self, scoreToAdd,sector):
+    
+    self.playerList[self.currPlayerIndex].currentRoundScore.append(scoreToAdd)
+    self.playerList[self.currPlayerIndex].currentRoundSectorScore.append(sector)
+    self.playerList[self.currPlayerIndex].currentScoreToShow += scoreToAdd        
+    if self.gameType == &#39;501&#39;:
+        if self.playerList[self.currPlayerIndex].currentScoreToShow &gt; 501 or self.playerList[self.currPlayerIndex].currentScoreToShow == 500:
+            
+            for ind in range(len(self.playerList[self.currPlayerIndex].currentRoundSectorScore)):
+                self.playerList[self.currPlayerIndex].currentRoundSectorScore[ind] = &#39;M&#39;
+                self.playerList[self.currPlayerIndex].currentRoundScore[ind] = 0
+            print(&#39;BUST - to much &#39;)
+            return &#39;Bust&#39;
+        else:
+            
+            print(&#39;Player is {}, dart {} in round {}, leg {}, set {}, score: {}, {}&#39;.format(self.playerList[self.currPlayerIndex].name, \
+                                                            self.currDart, self.currRound, self.currLeg, self.currSet, scoreToAdd,\
+                                                            self.playerList[self.currPlayerIndex].currentScoreToShow))
+
+            
+            if self.playerList[self.currPlayerIndex].currentScoreToShow == 501:
+                
+                if &#39;D&#39; in sector:
+                    print(&#39;WINNER of Leg is {}&#39;.format(self.playerList[self.currPlayerIndex].name ))
+                    return &#39;Win&#39;
+                else:
+                    for ind in range(len(self.playerList[self.currPlayerIndex].currentRoundSectorScore)):
+                        self.playerList[self.currPlayerIndex].currentRoundSectorScore[ind] = &#39;M&#39;
+                        self.playerList[self.currPlayerIndex].currentRoundScore[ind] = 0
+                    print(&#39;BUST - Not double&#39;)
+                    return &#39;Bust&#39;
+            
+            else:
+                return &#39;Normal&#39;</code></pre>
+</details>
+</dd>
+<dt id="game.Game.confirmThrow"><code class="name flex">
+<span>def <span class="ident">confirmThrow</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def confirmThrow(self):      
+    
+    self.playerList[self.currPlayerIndex].roundUpdateStats(self.waitForConfirm, self.currDart) 
+    self.currRoundPbP.append(self.playerList[self.currPlayerIndex].currentRoundSectorScore)
+    
+    if self.waitForConfirm == &#39;Normal&#39;:
+        self.playerList[self.currPlayerIndex].currentScore += self.playerList[self.currPlayerIndex].flushScore()
+        self.playerList[self.currPlayerIndex].currentScoreToShow = self.playerList[self.currPlayerIndex].currentScore
+        self.playerList[self.currPlayerIndex].checkRoundForCheckout()
+        self.playerList[self.currPlayerIndex].legDT += 3
+        self.playerList[self.currPlayerIndex].legAvg = self.playerList[self.currPlayerIndex].currentScore / self.playerList[self.currPlayerIndex].legDT
+        self.playerList[self.currPlayerIndex].gameDT += 3
+        self.playerList[self.currPlayerIndex].gameAvg = (self.playerList[self.currPlayerIndex].gameScore + self.playerList[self.currPlayerIndex].currentScore )/ self.playerList[self.currPlayerIndex].gameDT
+        self.nextPlayer()
+
+        
+    elif self.waitForConfirm == &#39;Bust&#39;:
+        self.playerList[self.currPlayerIndex].flushScore()
+        self.playerList[self.currPlayerIndex].legDT += self.currDart
+        self.playerList[self.currPlayerIndex].legAvg = self.playerList[self.currPlayerIndex].currentScore / self.playerList[self.currPlayerIndex].legDT
+        self.playerList[self.currPlayerIndex].gameDT += self.currDart
+        self.playerList[self.currPlayerIndex].gameAvg = (self.playerList[self.currPlayerIndex].gameScore + self.playerList[self.currPlayerIndex].currentScore )/ self.playerList[self.currPlayerIndex].gameDT
+        self.nextPlayer()
+        
+    elif self.waitForConfirm == &#39;Win&#39;:        
+          
+        self.playerList[self.currPlayerIndex].checkRoundForCheckout()
+        self.playerList[self.currPlayerIndex].legDT += self.currDart
+        self.playerList[self.currPlayerIndex].legAvg = 501 / self.playerList[self.currPlayerIndex].legDT
+        self.playerList[self.currPlayerIndex].gameDT += self.currDart
+        self.playerList[self.currPlayerIndex].gameAvg = (self.playerList[self.currPlayerIndex].gameScore + 501 )/ self.playerList[self.currPlayerIndex].gameDT
+        
+        self.nextLeg()
+        self.playerList[self.currPlayerIndex].flushScore()
+    
+    self.waitForConfirm = &#39;NoConfirmNeeded&#39;</code></pre>
+</details>
+</dd>
+<dt id="game.Game.finalizeGameStats"><code class="name flex">
+<span>def <span class="ident">finalizeGameStats</span></span>(<span>self, winner)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def finalizeGameStats(self,winner):
+    
+    gameAvg = []
+    
+    for player in self.playerList:
+        playerAvg = []
+        playerAvg.append(player.playerCurrentStats[&#39;X01&#39;][&#39;First9Avg&#39;])
+        playerAvg.append(player.playerCurrentStats[&#39;X01&#39;][&#39;OverallAvg&#39;])
+        gameAvg.append(playerAvg)
+    
+    self.gameStats[&#34;PlayerAVG&#34;] = gameAvg
+    self.gameStats[&#34;Winner&#34;] = winner</code></pre>
+</details>
+</dd>
+<dt id="game.Game.nextLeg"><code class="name flex">
+<span>def <span class="ident">nextLeg</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def nextLeg(self):
+    if self.gameType == &#39;501&#39;:
+        
+        self.currLegPbP.append(copy.deepcopy(self.currRoundPbP))
+        self.appendGameLegStats()
+        self.currRoundPbP.clear()
+        self.currLegPbP.clear()
+        
+        self.currRound = 1
+        self.currDart = 1
+        self.currLeg += 1
+        self.resetAllPlayersScore()
+        
+        self.playerList[self.currPlayerIndex].legsWon += 1
+        
+        for index in range(self.numPlayers):
+            if index == self.currPlayerIndex:
+                self.playerList[index].legUpdateStats(True)
+            else:
+                self.playerList[index].legUpdateStats(False)    
+            self.playerList[index].legAvg = 0
+            self.playerList[index].legDT = 0
+            
+        if self.playerList[self.currPlayerIndex].legsWon == self.numOfLegs:
+            
+            self.resetAllPlayersLegs()
+            
+            self.playerList[self.currPlayerIndex].setsWon += 1
+            self.currSet += 1
+            print(&#39;WINNER of Set is {}&#39;.format(self.playerList[self.currPlayerIndex].name ))
+            
+            if self.playerList[self.currPlayerIndex].setsWon == self.numOfSets:
+                print(&#39;WINNER of Game is {}&#39;.format(self.playerList[self.currPlayerIndex].name ))
+                
+                for index in range(self.numPlayers):
+                    if index == self.currPlayerIndex:
+                        self.playerList[index].gameUpdateStats(True)
+                    else:
+                        self.playerList[index].gameUpdateStats(False)    
+                    
+                    self.playerList[index].updatePlayerDB(self.gameID)
+                    
+                self.finalizeGameStats(self.playerList[self.currPlayerIndex].name )
+                self.gameState = &#39;GameEnd&#39;
+                
+        self.updateStarterOfLeg()</code></pre>
+</details>
+</dd>
+<dt id="game.Game.nextPlayer"><code class="name flex">
+<span>def <span class="ident">nextPlayer</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def nextPlayer(self):
+    self.currPlayerIndex += 1
+    self.currDart = 1
+    if self.currPlayerIndex &gt; self.numPlayers-1:
+        self.currPlayerIndex = 0
+        
+    if self.currPlayerIndex == self.currStarterIndex:
+        self.currRound += 1
+        self.currLegPbP.append(copy.deepcopy(self.currRoundPbP))
+        self.currRoundPbP.clear()</code></pre>
+</details>
+</dd>
+<dt id="game.Game.pushForwardGame"><code class="name flex">
+<span>def <span class="ident">pushForwardGame</span></span>(<span>self, scoreToAdd, sect)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pushForwardGame(self, scoreToAdd, sect):
+    if self.gameType == &#39;501&#39;:
+        
+        if self.gameState == &#34;GameOn&#34; and self.waitForConfirm == &#39;NoConfirmNeeded&#39;:
+            
+            if self.currDart &lt;= 3:
+                
+                throwResult = self.checkRule(scoreToAdd, sect)
+                
+                if throwResult == &#39;Normal&#39;:
+                
+                    self.currDart += 1
+                    
+                    if (self.currDart &gt; 3):
+                        self.currDart = 3
+                        self.waitForConfirm = &#39;Normal&#39;
+                    else:
+                        pass
+                    
+                elif throwResult == &#39;Bust&#39;:
+                    self.waitForConfirm = &#39;Bust&#39;
+                    
+                else: #win
+                    self.waitForConfirm = &#39;Win&#39;</code></pre>
+</details>
+</dd>
+<dt id="game.Game.resetAllPlayersLegs"><code class="name flex">
+<span>def <span class="ident">resetAllPlayersLegs</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def resetAllPlayersLegs(self):
+    for player in self.playerList:
+        player.legsWon = 0   
+    self.currLeg = 1  </code></pre>
+</details>
+</dd>
+<dt id="game.Game.resetAllPlayersScore"><code class="name flex">
+<span>def <span class="ident">resetAllPlayersScore</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def resetAllPlayersScore(self):
+    for player in self.playerList:
+        player.gameScore += player.currentScoreToShow
+        player.currentScore = 0
+        player.currentScoreToShow = 0
+        player.flushScore()</code></pre>
+</details>
+</dd>
+<dt id="game.Game.undoLastThrow"><code class="name flex">
+<span>def <span class="ident">undoLastThrow</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def undoLastThrow(self):
+    
+    if self.waitForConfirm == &#39;NoConfirmNeeded&#39;:
+        if self.currDart &gt; 1:
+            self.currDart -= 1
+            scoreToUndo = self.playerList[self.currPlayerIndex].currentRoundScore.pop()
+            self.playerList[self.currPlayerIndex].currentRoundSectorScore.pop()
+            self.playerList[self.currPlayerIndex].currentScoreToShow -= scoreToUndo
+
+    else:
+        scoreToUndo = self.playerList[self.currPlayerIndex].currentRoundScore.pop()
+        self.playerList[self.currPlayerIndex].currentRoundSectorScore.pop()
+        self.playerList[self.currPlayerIndex].currentScoreToShow -= scoreToUndo
+        self.waitForConfirm = &#39;NoConfirmNeeded&#39;</code></pre>
+</details>
+</dd>
+<dt id="game.Game.updateStarterOfLeg"><code class="name flex">
+<span>def <span class="ident">updateStarterOfLeg</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def updateStarterOfLeg(self):
+    self.currStarterIndex +=1 
+                
+    if self.currStarterIndex == self.numPlayers:
+        self.currStarterIndex = 0
+    
+    self.currPlayerIndex = self.currStarterIndex</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="game.Player"><code class="flex name class">
+<span>class <span class="ident">Player</span></span>
+<span>(</span><span>playerProfile)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Player():
+
+    
+    def __init__(self, playerProfile):
+            self.playerDB = playerProfile
+            self.playerCurrentStats = copy.deepcopy(profileTemp[&#39;Stats&#39;])
+            self.name = playerProfile[&#39;Name&#39;]
+            
+            self.currentScore = 0
+            self.gameScore = 0
+            self.currentScoreToShow = 0
+            self.isRoundForCheckout = False
+            self.currentRoundScore = []
+            self.currentRoundSectorScore = []
+            self.legsWon = 0
+            self.setsWon = 0
+            
+            self.legAvg = 0
+            self.legDT = 0
+            self.gameAvg = 0
+            self.gameDT = 0
+            self.totalScore = 0
+            self.totalF9Score = 0
+            self.totalF9DT = 0
+    
+    def roundUpdateStats(self, confirmType, dart):  
+        
+        #Darts Thrown, Darts For Checkout
+        roundSum = 0
+        for dartScore in self.currentRoundScore:
+            roundSum += dartScore
+            
+        if confirmType == &#39;Normal&#39;:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;] += 3 
+            if self.isRoundForCheckout:
+                self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;] += 3 
+        elif confirmType == &#39;Bust&#39;:
+            roundSum = 0
+            self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;] += dart
+            if self.isRoundForCheckout:
+                self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;] += dart 
+        elif confirmType == &#39;Win&#39;:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;] += dart
+            if self.isRoundForCheckout:
+                self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;] += dart 
+        else:
+            pass
+    
+    
+        #60+, 100+, 140+, 180
+        if roundSum == 180:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;180&#39;] += 1
+        elif roundSum &gt;= 140:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;140+&#39;] += 1
+        elif roundSum &gt;= 100:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;100+&#39;] += 1
+        elif roundSum &gt;= 60:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;60+&#39;] += 1
+        else:
+            pass
+        
+        # Overall Avg, First 9 Avg  
+        if (self.legDT + dart) &lt;= 9:
+            self.totalF9Score += roundSum
+            self.totalF9DT += 3
+            self.playerCurrentStats[&#39;X01&#39;][&#39;First9Avg&#39;] = self.totalF9Score / self.totalF9DT
+        
+        self.totalScore += roundSum
+        self.playerCurrentStats[&#39;X01&#39;][&#39;OverallAvg&#39;] = self.totalScore / self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;]
+        
+        
+        
+        # OverallSectorStats
+        for sect in self.currentRoundSectorScore:
+            if str(sect) in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;].keys():
+                self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][str(sect)] += 1
+            else: 
+                self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][str(sect)] = 1
+        
+        # OverallDartStats  
+        for dart in self.currentRoundScore:
+            if str(dart) in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;].keys():
+                self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][str(dart)] += 1
+            else: 
+                self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][str(dart)] = 1
+            
+        # OverallRoundStats
+        if str(roundSum) in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;].keys():
+            self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][str(roundSum)] += 1
+        else: 
+            self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][str(roundSum)] = 1 
+               
+    def checkRoundForCheckout(self):
+        if (self.currentScore &gt;= 331) and (self.currentScore not in [332,333,335,336,338,339,342]):
+            self.isRoundForCheckout = True
+        else:
+            self.isRoundForCheckout = False
+    
+    def legUpdateStats(self, isWon):
+        
+        # legsPlayed, legsWon, bestLegAvg
+        
+        self.playerCurrentStats[&#39;X01&#39;][&#39;LegsPlayed&#39;] += 1
+        
+        if isWon:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;LegsWon&#39;] += 1
+        else:
+            pass
+        
+        if self.legAvg &gt; self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;]:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;] = self.legAvg
+        
+    
+    def gameUpdateStats(self,isWon):
+        
+        #gamesPlayed
+        self.playerCurrentStats[&#39;X01&#39;][&#39;GamesPlayed&#39;] += 1
+        
+        #GamesWon
+        if isWon:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;GamesWon&#39;] += 1
+        else:
+            pass
+        
+        #bestGameAvg
+        if self.gameAvg &gt; self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;]:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;] = self.gameAvg 
+    
+    def updatePlayerDB(self,gameID):
+        
+        oldDT = self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsThrown&#39;]
+        oldDTf9 = self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;LegsPlayed&#39;] * 9
+        
+        #Add game ID
+        self.playerDB[&#39;Games&#39;][&#39;X01&#39;].append(gameID)
+        
+        #DT
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsThrown&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;]
+        
+        #DT for Checkout
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsForCheckout&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;]
+        
+        #GamesPlayed
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;GamesPlayed&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;GamesPlayed&#39;]
+        
+        #GamesWon
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;GamesWon&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;GamesWon&#39;]
+        
+        #LegsPlayed
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;LegsPlayed&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;LegsPlayed&#39;]
+        
+        #LegsWon
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;LegsWon&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;LegsWon&#39;]
+        
+        #60+, 100+, 140+, 180
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;60+&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;60+&#39;]
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;100+&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;100+&#39;]
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;140+&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;140+&#39;]
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;180&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;180&#39;]
+        
+        #OverallAvg
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallAvg&#39;] = (self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallAvg&#39;] * oldDT + self.gameScore) / self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsThrown&#39;]
+        
+        #First9Avg
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;First9Avg&#39;] = (self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;First9Avg&#39;] * oldDTf9 + self.totalF9Score) / (oldDTf9 + self.totalF9DT)
+        
+        #BestGameAvg
+        if self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;] &gt; self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestGameAvg&#39;]:
+            self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestGameAvg&#39;] = self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;]
+            
+        #BestLegAvg
+        if self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;] &gt; self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestLegAvg&#39;]:
+            self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestLegAvg&#39;] = self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;]
+            
+            
+        #OverallSectorStats
+        
+        for sectorStat in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;].keys():
+            if sectorStat in self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallSectorStats&#39;]:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat] += self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat]
+            else:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat] = self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat]
+                
+        #OverallDartStats
+        for dartStat in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;].keys():
+            if dartStat in self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;]:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat] += self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat]
+            else:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat] = self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat]
+        
+        #OverallRoundStats
+        for roundStat in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;].keys():
+            if roundStat in self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallRoundStats&#39;]:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat] += self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat]
+            else:
+                self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat] = self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat]
+        
+            
+    def flushScore(self):
+        roundSum = 0
+        
+        for scr in self.currentRoundScore:
+            roundSum += scr
+            
+        self.currentRoundScore = []
+        self.currentRoundSectorScore = []
+        self.currentScoreToShow = self.currentScore
+        return roundSum</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="game.Player.checkRoundForCheckout"><code class="name flex">
+<span>def <span class="ident">checkRoundForCheckout</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def checkRoundForCheckout(self):
+    if (self.currentScore &gt;= 331) and (self.currentScore not in [332,333,335,336,338,339,342]):
+        self.isRoundForCheckout = True
+    else:
+        self.isRoundForCheckout = False</code></pre>
+</details>
+</dd>
+<dt id="game.Player.flushScore"><code class="name flex">
+<span>def <span class="ident">flushScore</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def flushScore(self):
+    roundSum = 0
+    
+    for scr in self.currentRoundScore:
+        roundSum += scr
+        
+    self.currentRoundScore = []
+    self.currentRoundSectorScore = []
+    self.currentScoreToShow = self.currentScore
+    return roundSum</code></pre>
+</details>
+</dd>
+<dt id="game.Player.gameUpdateStats"><code class="name flex">
+<span>def <span class="ident">gameUpdateStats</span></span>(<span>self, isWon)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def gameUpdateStats(self,isWon):
+    
+    #gamesPlayed
+    self.playerCurrentStats[&#39;X01&#39;][&#39;GamesPlayed&#39;] += 1
+    
+    #GamesWon
+    if isWon:
+        self.playerCurrentStats[&#39;X01&#39;][&#39;GamesWon&#39;] += 1
+    else:
+        pass
+    
+    #bestGameAvg
+    if self.gameAvg &gt; self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;]:
+        self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;] = self.gameAvg </code></pre>
+</details>
+</dd>
+<dt id="game.Player.legUpdateStats"><code class="name flex">
+<span>def <span class="ident">legUpdateStats</span></span>(<span>self, isWon)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def legUpdateStats(self, isWon):
+    
+    # legsPlayed, legsWon, bestLegAvg
+    
+    self.playerCurrentStats[&#39;X01&#39;][&#39;LegsPlayed&#39;] += 1
+    
+    if isWon:
+        self.playerCurrentStats[&#39;X01&#39;][&#39;LegsWon&#39;] += 1
+    else:
+        pass
+    
+    if self.legAvg &gt; self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;]:
+        self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;] = self.legAvg</code></pre>
+</details>
+</dd>
+<dt id="game.Player.roundUpdateStats"><code class="name flex">
+<span>def <span class="ident">roundUpdateStats</span></span>(<span>self, confirmType, dart)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def roundUpdateStats(self, confirmType, dart):  
+    
+    #Darts Thrown, Darts For Checkout
+    roundSum = 0
+    for dartScore in self.currentRoundScore:
+        roundSum += dartScore
+        
+    if confirmType == &#39;Normal&#39;:
+        self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;] += 3 
+        if self.isRoundForCheckout:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;] += 3 
+    elif confirmType == &#39;Bust&#39;:
+        roundSum = 0
+        self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;] += dart
+        if self.isRoundForCheckout:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;] += dart 
+    elif confirmType == &#39;Win&#39;:
+        self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;] += dart
+        if self.isRoundForCheckout:
+            self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;] += dart 
+    else:
+        pass
+
+
+    #60+, 100+, 140+, 180
+    if roundSum == 180:
+        self.playerCurrentStats[&#39;X01&#39;][&#39;180&#39;] += 1
+    elif roundSum &gt;= 140:
+        self.playerCurrentStats[&#39;X01&#39;][&#39;140+&#39;] += 1
+    elif roundSum &gt;= 100:
+        self.playerCurrentStats[&#39;X01&#39;][&#39;100+&#39;] += 1
+    elif roundSum &gt;= 60:
+        self.playerCurrentStats[&#39;X01&#39;][&#39;60+&#39;] += 1
+    else:
+        pass
+    
+    # Overall Avg, First 9 Avg  
+    if (self.legDT + dart) &lt;= 9:
+        self.totalF9Score += roundSum
+        self.totalF9DT += 3
+        self.playerCurrentStats[&#39;X01&#39;][&#39;First9Avg&#39;] = self.totalF9Score / self.totalF9DT
+    
+    self.totalScore += roundSum
+    self.playerCurrentStats[&#39;X01&#39;][&#39;OverallAvg&#39;] = self.totalScore / self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;]
+    
+    
+    
+    # OverallSectorStats
+    for sect in self.currentRoundSectorScore:
+        if str(sect) in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;].keys():
+            self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][str(sect)] += 1
+        else: 
+            self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][str(sect)] = 1
+    
+    # OverallDartStats  
+    for dart in self.currentRoundScore:
+        if str(dart) in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;].keys():
+            self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][str(dart)] += 1
+        else: 
+            self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][str(dart)] = 1
+        
+    # OverallRoundStats
+    if str(roundSum) in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;].keys():
+        self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][str(roundSum)] += 1
+    else: 
+        self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][str(roundSum)] = 1 </code></pre>
+</details>
+</dd>
+<dt id="game.Player.updatePlayerDB"><code class="name flex">
+<span>def <span class="ident">updatePlayerDB</span></span>(<span>self, gameID)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def updatePlayerDB(self,gameID):
+    
+    oldDT = self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsThrown&#39;]
+    oldDTf9 = self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;LegsPlayed&#39;] * 9
+    
+    #Add game ID
+    self.playerDB[&#39;Games&#39;][&#39;X01&#39;].append(gameID)
+    
+    #DT
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsThrown&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;DartsThrown&#39;]
+    
+    #DT for Checkout
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsForCheckout&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;DartsForCheckout&#39;]
+    
+    #GamesPlayed
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;GamesPlayed&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;GamesPlayed&#39;]
+    
+    #GamesWon
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;GamesWon&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;GamesWon&#39;]
+    
+    #LegsPlayed
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;LegsPlayed&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;LegsPlayed&#39;]
+    
+    #LegsWon
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;LegsWon&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;LegsWon&#39;]
+    
+    #60+, 100+, 140+, 180
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;60+&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;60+&#39;]
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;100+&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;100+&#39;]
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;140+&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;140+&#39;]
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;180&#39;] += self.playerCurrentStats[&#39;X01&#39;][&#39;180&#39;]
+    
+    #OverallAvg
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallAvg&#39;] = (self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallAvg&#39;] * oldDT + self.gameScore) / self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;DartsThrown&#39;]
+    
+    #First9Avg
+    self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;First9Avg&#39;] = (self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;First9Avg&#39;] * oldDTf9 + self.totalF9Score) / (oldDTf9 + self.totalF9DT)
+    
+    #BestGameAvg
+    if self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;] &gt; self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestGameAvg&#39;]:
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestGameAvg&#39;] = self.playerCurrentStats[&#39;X01&#39;][&#39;BestGameAvg&#39;]
+        
+    #BestLegAvg
+    if self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;] &gt; self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestLegAvg&#39;]:
+        self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;BestLegAvg&#39;] = self.playerCurrentStats[&#39;X01&#39;][&#39;BestLegAvg&#39;]
+        
+        
+    #OverallSectorStats
+    
+    for sectorStat in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;].keys():
+        if sectorStat in self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallSectorStats&#39;]:
+            self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat] += self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat]
+        else:
+            self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat] = self.playerCurrentStats[&#39;X01&#39;][&#39;OverallSectorStats&#39;][sectorStat]
+            
+    #OverallDartStats
+    for dartStat in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;].keys():
+        if dartStat in self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;]:
+            self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat] += self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat]
+        else:
+            self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat] = self.playerCurrentStats[&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat]
+    
+    #OverallRoundStats
+    for roundStat in self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;].keys():
+        if roundStat in self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallRoundStats&#39;]:
+            self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat] += self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat]
+        else:
+            self.playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat] = self.playerCurrentStats[&#39;X01&#39;][&#39;OverallRoundStats&#39;][roundStat]</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="game.Game" href="#game.Game">Game</a></code></h4>
+<ul class="">
+<li><code><a title="game.Game.appendGameLegStats" href="#game.Game.appendGameLegStats">appendGameLegStats</a></code></li>
+<li><code><a title="game.Game.checkRule" href="#game.Game.checkRule">checkRule</a></code></li>
+<li><code><a title="game.Game.confirmThrow" href="#game.Game.confirmThrow">confirmThrow</a></code></li>
+<li><code><a title="game.Game.finalizeGameStats" href="#game.Game.finalizeGameStats">finalizeGameStats</a></code></li>
+<li><code><a title="game.Game.nextLeg" href="#game.Game.nextLeg">nextLeg</a></code></li>
+<li><code><a title="game.Game.nextPlayer" href="#game.Game.nextPlayer">nextPlayer</a></code></li>
+<li><code><a title="game.Game.pushForwardGame" href="#game.Game.pushForwardGame">pushForwardGame</a></code></li>
+<li><code><a title="game.Game.resetAllPlayersLegs" href="#game.Game.resetAllPlayersLegs">resetAllPlayersLegs</a></code></li>
+<li><code><a title="game.Game.resetAllPlayersScore" href="#game.Game.resetAllPlayersScore">resetAllPlayersScore</a></code></li>
+<li><code><a title="game.Game.undoLastThrow" href="#game.Game.undoLastThrow">undoLastThrow</a></code></li>
+<li><code><a title="game.Game.updateStarterOfLeg" href="#game.Game.updateStarterOfLeg">updateStarterOfLeg</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="game.Player" href="#game.Player">Player</a></code></h4>
+<ul class="">
+<li><code><a title="game.Player.checkRoundForCheckout" href="#game.Player.checkRoundForCheckout">checkRoundForCheckout</a></code></li>
+<li><code><a title="game.Player.flushScore" href="#game.Player.flushScore">flushScore</a></code></li>
+<li><code><a title="game.Player.gameUpdateStats" href="#game.Player.gameUpdateStats">gameUpdateStats</a></code></li>
+<li><code><a title="game.Player.legUpdateStats" href="#game.Player.legUpdateStats">legUpdateStats</a></code></li>
+<li><code><a title="game.Player.roundUpdateStats" href="#game.Player.roundUpdateStats">roundUpdateStats</a></code></li>
+<li><code><a title="game.Player.updatePlayerDB" href="#game.Player.updatePlayerDB">updatePlayerDB</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

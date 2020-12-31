@@ -1,0 +1,148 @@
+#:kivy 1.0.9
+
+#:set whiteStat (1, 1, 1, 1)
+
+#:set handicapUpperLineRatio 120/144
+#:set normalUpperLineRatio 134/144
+
+#:set handicapTripleLineRatio 96/144
+#:set normalTripleLineRatio 84/144
+
+#:set handicapLowerLineRatio 72/144
+#:set normalLowerLineRatio 74/144
+
+#:set handicapBullLineRatio 48/144
+#:set normalBullLineRatio 20/144
+
+#:set handicapBullsEyeLineRatio 24/144
+#:set normalBullsEyeLineRatio 10/144
+
+<LabelB>:
+	bcolor: 1, 1, 1, .5
+	size: self.texture_size
+	markup: True
+	canvas.before:
+		Color:
+			rgba: self.bcolor
+		Rectangle:
+			pos: (self.pos[0] + self.parent.center_x/2 - 100, self.pos[1] + self.parent.center_y - 90)
+			size: (300,150)
+
+
+<Sector>: 
+	
+	upperLineRatio: handicapUpperLineRatio if app.isHandicapMode else normalUpperLineRatio
+	tripleLineRatio: handicapTripleLineRatio if app.isHandicapMode else normalTripleLineRatio
+	lowerLineRatio: handicapLowerLineRatio if app.isHandicapMode else normalLowerLineRatio
+	
+	canvas:
+		Color: 
+            rgba: self.doubleColor
+        Ellipse: 
+            angle_start: self.baseAngle - 9 
+            angle_end: self.baseAngle + 9 
+            pos: 
+            	(self.parent.center_x - min(self.parent.width, self.parent.height)/2*self.boardLineRatio*self.windowBoardRatio, 
+            	self.parent.center_y - min(self.parent.width, self.parent.height)/2*self.boardLineRatio*self.windowBoardRatio)
+            size: 
+            	(min(root.width, root.height)*self.boardLineRatio*self.windowBoardRatio, 
+            	min(root.width, root.height)*self.boardLineRatio*self.windowBoardRatio)
+        
+        Color: 
+            rgba: self.upperSectorColor
+        Ellipse: 
+            angle_start: self.baseAngle - 9 
+            angle_end: self.baseAngle + 9 
+            pos: 
+            	(self.parent.center_x - min(self.parent.width, self.parent.height)/2*self.upperLineRatio*self.windowBoardRatio, 
+            	self.parent.center_y - min(self.parent.width, self.parent.height)/2*self.upperLineRatio*self.windowBoardRatio)
+            size: 
+            	(min(self.parent.width, self.parent.height)*self.upperLineRatio*self.windowBoardRatio, 
+            	min(self.parent.width, self.parent.height)*self.upperLineRatio*self.windowBoardRatio)
+        
+        Color: 
+            rgba: self.tripleColor
+        Ellipse: 
+            angle_start: self.baseAngle - 9 
+            angle_end: self.baseAngle + 9 
+            pos: 
+            	(self.parent.center_x - min(self.parent.width, self.parent.height)/2*self.tripleLineRatio*self.windowBoardRatio, 
+            	self.parent.center_y - min(self.parent.width, self.parent.height)/2*self.tripleLineRatio*self.windowBoardRatio)
+            size: 
+            	(min(self.parent.width, self.parent.height)*self.tripleLineRatio*self.windowBoardRatio, 
+            	min(self.parent.width, self.parent.height)*self.tripleLineRatio*self.windowBoardRatio)
+        
+        Color: 
+            rgba: self.lowerSectorColor
+        Ellipse: 
+            angle_start: self.baseAngle - 9 
+            angle_end: self.baseAngle + 9 
+            pos: 
+            	(self.parent.center_x - min(self.parent.width, self.parent.height)/2*self.lowerLineRatio*self.windowBoardRatio, 
+            	self.parent.center_y - min(self.parent.width, self.parent.height)/2*self.lowerLineRatio*self.windowBoardRatio)
+            size: 
+            	(min(self.parent.width, self.parent.height)*self.lowerLineRatio*self.windowBoardRatio, 
+            	min(self.parent.width, self.parent.height)*self.lowerLineRatio*self.windowBoardRatio)
+            
+		Color:
+            rgba: .9, .9, .9, .9
+        Line:
+            width: 2.
+            circle:
+                (self.parent.center_x, self.parent.center_y, 
+                min(self.parent.width, self.parent.height) / 2*self.windowBoardRatio, 
+                self.baseAngle - 9, self.baseAngle + 9)
+	Label:
+
+		font_size: 55  
+		center_x: self.parent.center_x*1.85 + (min(self.parent.width, self.parent.height)/2 * .9 * math.sin(self.parent.baseAngle * math.pi / 180))
+		center_y: root.center_y + (min(self.parent.width, self.parent.height)/2 * .9 * math.cos(self.parent.baseAngle * math.pi / 180))
+		text: str(self.parent.score)
+		color: 1,1,1,.8
+		
+<BullSector>: 
+
+	bullLineRatio: handicapBullLineRatio if app.isHandicapMode else normalBullLineRatio
+	bullsEyeLineRatio: handicapBullsEyeLineRatio if app.isHandicapMode else normalBullsEyeLineRatio
+	
+	canvas:
+		Color: 			
+            rgba: self.bullColor
+        Ellipse: 
+            pos: 
+            	(self.parent.center_x - min(self.parent.width, self.parent.height)/2*self.bullLineRatio*self.windowBoardRatio, 
+            	self.parent.center_y - min(self.parent.width, self.parent.height)/2*self.bullLineRatio*self.windowBoardRatio)
+            size: 
+            	(min(self.parent.width, self.parent.height)*self.bullLineRatio*self.windowBoardRatio, 
+            	min(self.parent.width, self.parent.height)*self.bullLineRatio*self.windowBoardRatio)
+        
+        Color: 
+            rgba: self.bullsEyeColor
+        Ellipse: 
+            pos: 
+            	(self.parent.center_x - min(self.parent.width, self.parent.height)/2*self.bullsEyeLineRatio*self.windowBoardRatio, 
+            	self.parent.center_y - min(self.parent.width, self.parent.height)/2*self.bullsEyeLineRatio*self.windowBoardRatio)
+            size: 
+            	(min(self.parent.width, self.parent.height)*self.bullsEyeLineRatio*self.windowBoardRatio, 
+            	min(self.parent.width, self.parent.height)*self.bullsEyeLineRatio*self.windowBoardRatio)
+
+<BlackSector>: 
+	canvas:
+		Color: 			
+            rgba: self.blackColor
+        Ellipse: 
+            pos: 
+            	(self.parent.center_x - min(self.parent.width, self.parent.height)/2, 
+            	self.parent.center_y - min(self.parent.width, self.parent.height)/2)
+            size: 
+            	(min(self.parent.width, self.parent.height), 
+            	min(self.parent.width, self.parent.height))
+            	
+            	
+<StatsSector>:
+	
+	
+<StatsBullSector>:
+
+
+<StatsBlackSector>:

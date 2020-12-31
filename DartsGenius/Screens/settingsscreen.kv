@@ -1,0 +1,189 @@
+#:kivy 1.0.9
+
+<SettingsScreen>:
+	canvas.before:
+        Color:
+            rgba: .2, .2, .2, 1
+        Rectangle:
+            size: self.size
+      
+    BoxLayout: 
+    	
+    	orientation: 'horizontal'
+    	 
+        BoxLayout:
+        	id: bl
+        	orientation: 'vertical'
+	    	size_hint: .3, 1
+	    	canvas.before:
+				Color:
+				    rgba: .1, .1, .1, 1
+				Rectangle:
+				    pos: self.pos
+				    size: self.size
+				
+				
+			ScrollView:
+				id: sv
+				size_hint: 1, .8
+
+				Label:
+					text: app.profileShortInfoText
+					font_size: 30
+					size_hint_x: 1.0
+					size_hint_y: None
+					text_size: self.width, None
+					height: self.texture_size[1]
+					markup: True
+	                
+		    Button:
+		    	size_hint: 1, .1
+                text: 'Create Profile'
+				on_release: app.root.show_popup()
+                
+		    Button:
+		    	size_hint: 1, .1
+                text: 'Start Game'
+                on_release: app.root.ids.ScrnMngr.current = 'Game On'
+                disabled: (not app.gameCanStart)
+	    	
+	    BoxLayout:
+	    	size_hint: .7,1
+	    	
+    		BoxLayout:
+				orientation: 'vertical'
+				
+				Label
+					size_hint: 1, .2
+					text: "Select Players"
+				
+				BoxLayout:
+					size_hint: 1, .8
+					orientation: 'vertical'
+					
+					BoxLayout:
+						orientation: 'horizontal'
+						
+						Label:
+							size_hint: .3, 1
+							text: "P1"
+							
+						Spinner:
+							id: SpinnerP1
+							size_hint: .7, 1
+							text: app.selectedPlayerList[0]
+							values: app.availablePlayerList
+							on_text: app.evaluatePlayerSpinners(self.text, 0)
+							
+					BoxLayout:
+						orientation: 'horizontal'
+						
+						Label:
+							size_hint: .3, 1
+							text: "P2"
+							
+						Spinner:
+							id: SpinnerP2
+							size_hint: .7, 1
+							text: app.selectedPlayerList[1]
+							values: app.availablePlayerList
+							disabled: True if root.ids.SpinnerP1.text == '-' else False
+							on_text: app.evaluatePlayerSpinners(self.text, 1)
+							
+					BoxLayout:
+						orientation: 'horizontal'
+						
+						Label:
+							size_hint: .3, 1
+							text: "P3"
+							
+						Spinner:
+							id: SpinnerP3
+							size_hint: .7, 1
+							text: app.selectedPlayerList[2]
+							values: app.availablePlayerList
+							disabled: True if root.ids.SpinnerP2.text == '-' else False
+							on_text: app.evaluatePlayerSpinners(self.text, 2)
+							
+					BoxLayout:
+						orientation: 'horizontal'
+						
+						Label:
+							size_hint: .3, 1
+							text: "P4"
+							
+						Spinner:
+							id: SpinnerP4
+							size_hint: .7, 1
+							text: app.selectedPlayerList[3]
+							values: app.availablePlayerList
+							disabled: True if root.ids.SpinnerP3.text == '-' else False
+							on_text: app.evaluatePlayerSpinners(self.text, 3)
+				
+			BoxLayout:
+				orientation: 'vertical'
+				
+				Label
+					size_hint: 1, .2
+					text: "Settings"
+				
+				BoxLayout:
+					size_hint: 1, .8
+					orientation: 'vertical'
+					
+					BoxLayout:
+						orientation: 'horizontal'
+						
+						Label:
+							size_hint: .3, 1
+							text: "Game Type"
+							
+						Spinner:
+							id: SpinnerGT
+							size_hint: .7, 1
+							text: '501'
+							values: ['501']
+							on_text: app.gameType = self.text
+							
+					BoxLayout:
+						orientation: 'horizontal'
+						
+						Label:
+							size_hint: .3, 1
+							text: "First to"
+							
+						Spinner:
+							id: SpinnerFT
+							size_hint: .7, 1
+							text: '1'
+							values: ['1','2','3','4','5']
+							on_text: app.gameFirstTo = self.text
+							
+					BoxLayout:
+						orientation: 'horizontal'
+						
+						Label:
+							size_hint: .3, 1
+							text: "Legs"
+							
+						Spinner:
+							id: SpinnerL
+							size_hint: .7, 1
+							text: '1'
+							values: ['1','2','3','4','5']
+							on_text: app.gameLegNum = self.text
+							
+					BoxLayout:
+						orientation: 'horizontal'
+						
+						Label:
+							size_hint: .3, 1
+							text: "Random\nOrder"
+							
+						CheckBox:
+							size_hint: .7, 1
+							active: True
+							on_active: app.gameRandOrd = self.active
+							
+									
+	

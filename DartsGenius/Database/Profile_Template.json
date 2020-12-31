@@ -1,0 +1,33 @@
+{
+"Name" : "Template_Profile",
+"Games" : {
+	"X01" : [],
+	"Cricket" : [],
+	"Bobs27" : [],
+	"Sector" : [] 
+	},
+"Stats" : {
+	"X01" : {
+		"DartsThrown" : 0,
+		"DartsForCheckout" : 0,
+		"GamesPlayed" : 0,
+		"GamesWon" : 0,
+		"LegsPlayed" : 0,
+		"LegsWon" : 0,
+		"60+" : 0,
+		"100+" : 0,
+		"140+" : 0,
+		"180" : 0,
+		"OverallAvg" : 0,
+		"First9Avg" : 0,
+		"BestGameAvg" : 0,
+		"BestLegAvg" : 0,
+		"OverallSectorStats" : {
+		},
+		"OverallDartStats" : {
+		},
+		"OverallRoundStats" : {
+		}
+		}
+	}
+}

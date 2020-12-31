@@ -1,0 +1,163 @@
+#:kivy 1.0.9
+
+#:import utils kivy.utils 
+
+<GameStatsScreen>:
+	BoxLayout:
+        BoxLayout:
+        	orientation: 'vertical'
+	    	size_hint: .3, 1
+	    	canvas.before:
+				Color:
+				    rgba: .1, .1, .1, 1
+				Rectangle:
+				    pos: self.pos
+				    size: self.size
+			
+				
+			ScrollView:
+				size_hint: 1, .8
+			
+				Label:
+					text: app.gameStatsText
+					font_size: 30
+					size_hint_x: 1.0
+					size_hint_y: None
+					text_size: self.width, None
+					height: self.texture_size[1]
+					markup: True
+		    Button:
+				size_hint: 1, .1
+				text: 'Next Players Stats'
+				on_release: app.switchPlayerStats()
+				
+		    Button:
+		    	size_hint: 1, .1
+                text: 'Back to settings'
+                on_release: app.root.ids.ScrnMngr.current = 'Game Settings'
+		        
+	    FloatLayout:
+	    	size_hint: .7,1
+		    canvas.before:
+				Color:
+				    rgba: .3, .3, .3, 1
+				Rectangle:
+				    pos: self.pos
+				    size: self.size
+		    
+			
+		    
+		    StatsBlackSector:
+		    	id: statBL
+		    	
+		    	
+		    StatsSector:
+		    	id: stat20
+		    	baseAngle: 0	
+		    	score: 20
+		    	
+		    StatsSector:
+		    	id: stat1
+		    	baseAngle: 18
+		    	score: 1
+		    	
+		    StatsSector:
+		    	id: stat18
+		    	baseAngle: 36
+		    	score: 18
+		    	
+		    StatsSector:
+		    	id: stat4
+		    	baseAngle: 54
+		    	score: 4
+		    	
+		    StatsSector:
+		    	id: stat13
+		    	baseAngle: 72
+		    	score: 13
+		    	
+		    StatsSector:
+		    	id: stat6
+		    	baseAngle: 90
+		    	score: 6
+		    	
+		    StatsSector:
+		    	id: stat10
+		    	baseAngle: 108
+		    	score: 10
+		    	
+		    StatsSector:
+		    	id: stat15
+		    	baseAngle: 126
+		    	score: 15
+		    	
+		    StatsSector:
+		    	id: stat2
+		    	baseAngle: 144
+		    	score: 2
+		    	
+		    StatsSector:
+		    	id: stat17
+		    	baseAngle: 162
+		    	score: 17
+		    	
+		    StatsSector:
+		    	id: stat3
+		    	baseAngle: 180
+		    	score: 3
+		    	
+		    StatsSector:
+		    	id: stat19
+		    	baseAngle: 198
+		    	score: 19
+		    	
+		    StatsSector:
+		    	id: stat7
+		    	baseAngle: 216
+		    	score: 7
+		    	
+		    StatsSector:
+		    	id: stat16
+		    	baseAngle: 234
+		    	score: 16
+		    	
+		    StatsSector:
+		    	id: stat8
+		    	baseAngle: 252
+		    	score: 8
+			
+			StatsSector:
+		    	id: stat11
+		    	baseAngle: 270
+		    	score: 11
+		    	
+		    StatsSector:
+		    	id: stat14
+		    	baseAngle: 288
+		    	score: 14
+		    	
+			StatsSector:
+		    	id: stat9
+		    	baseAngle: 306
+		    	score: 9
+		    	   
+		    StatsSector:
+		    	id: stat12
+		    	baseAngle: 324
+		    	score: 12
+		    	
+		    StatsSector:
+		    	id: stat5
+		    	baseAngle: 342
+		    	score: 5
+		    	
+		    StatsBullSector:
+		    	id: statBU
+		    	
+		    LabelB:
+				id: statLabel
+				text: root.statText
+				font_size: 30
+				color: utils.get_color_from_hex('#00419c')
+				pos: (0,0)
+				

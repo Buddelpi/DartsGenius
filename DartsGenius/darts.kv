@@ -1,0 +1,77 @@
+#:kivy 1.0.9
+
+#:include Screens/sector.kv
+#:include Screens/gamescreen.kv
+#:include Screens/settingsscreen.kv
+#:include Screens/gamestatsscreen.kv
+
+#:import math math
+#:import game game
+#:import Factory kivy.factory.Factory
+#:import sm kivy.uix.screenmanager
+
+
+
+<ProfilePopup>:
+	BoxLayout:
+    	orientation: 'vertical'
+	    Label:
+	    	valign: 'center'
+	        text: root.popupText
+	        text_size: self.size
+	        size_hint: 1, .6
+	    TextInput:
+		    id: ProfileName
+		    size_hint: 1, .2
+		    height: '32dp'
+		    text: ''
+		    focus: True
+		Button:
+	    	size_hint: 1, .2
+	        text: 'Create Profile'
+			on_release: root.createProfile()
+   
+                
+<DartsGame>:    
+
+    BoxLayout:
+    	size: root.size
+    	orientation: 'vertical'
+    	
+    	ActionView:
+    		size_hint: 1, .1
+	        use_separator: True
+	        ActionPrevious:
+	            app_icon: ''
+	            title: str(ScrnMngr.current)
+	            with_previous: False
+	        ActionOverflow:
+	        ActionButton:
+	            text: 'Confirm'
+	            on_release: app.currGame.confirmThrow()
+	            disabled: (not app.confNeeded)
+	        ActionButton:
+	            text: 'Undo'
+	            on_release: app.currGame.undoLastThrow()
+	            disabled: (not app.gameIsOn)
+    	BoxLayout:
+    		size_hint: 1, .9
+    		
+	    	ScreenManager:
+		        id: ScrnMngr
+				transition: sm.CardTransition()
+				
+		        SettingsScreen:		        	
+		            name: 'Game Settings'
+		           
+		        GameScreen:
+		        	id: game_screen
+		            name: 'Game On'		            
+		            on_enter: app.startGame()
+		        
+		        GameStatsScreen:
+		        	id: gss
+		            name: 'Game Statistics'		
+		            on_enter: app.isHandicapMode = False            
+		            
+		            

@@ -1,0 +1,68 @@
+
+Inforamtion									Update rate
+___________________________________________________________________
+
+-------------------------------------------------------------------
+Profile database
+- Profile data shall be read out from database file at game start
+- A local copy has to be updated during and at the end of a game
+- Data has to be filled back to the database file at the end of a game
+-------------------------------------------------------------------
+{					
+"Name" : "Template_Profile",				Once at creation
+"Games" : {						
+	"X01" : [],								At end of a game
+	"Cricket" : [],							At end of a game
+	"Bobs27" : [],							At end of a game
+	"Sector" : [] 							At end of a game
+	},
+"Stats" : {
+	"X01" : {
+		"DartsThrown" : 0,					After every throw
+		"DartsForCheckout" : 0,				After every throw
+		"GamesPlayed" : 0,					After every game
+		"GamesWon" : 0,						After every game
+		"LegsPlayed" : 0,					After every leg
+		"LegsWon" : 0,						After every leg
+		"60+" : 0,							After every occasion, but should be evaluated after every throw
+		"100+" : 0,							After every occasion, but should be evaluated after every throw
+		"140+" : 0,							After every occasion, but should be evaluated after every throw
+		"180" : 0,							After every occasion, but should be evaluated after every throw
+		"OverallAvg" : 0,					After every throw
+		"First9Avg" : 0,					After every throw, within the first 9, but shall be evaluated after every throw
+		"BestGameAvg" : 0,					Should be evaluated after every game and updated accordingly
+		"BestLegAvg" : 0,					Should be evaluated after every leg and updated accordingly
+		"OverallSectorStats" : {			After every throw
+		},
+		"OverallDartStats" : {				After every throw
+		},
+		"OverallRoundStats" : {				After every round
+		}
+		}
+	}
+}
+
+
+-------------------------------------------------------------------
+Game database
+- A new entry has to be create locally based on the template
+- Update database at game and
+-------------------------------------------------------------------
+
+{
+	"GameTemplate" : {			
+		"ID" : "ID_1",						Once at creation
+		"DateTime" : "2020.04.15 10:00",	Once at creation
+		"Players" : ["P1"],					Once at creation
+		"GameType" : "X01_S1_L1",			Once at creation
+		"Winner" : "P1",					Once at game end
+		"PlayerAVG" : [41,49],				Once at game end
+	"PlayByPlay" : []						Append after every leg
+	},
+	"LegTamplate" : {
+		"Leg" : "S1L1",						Once at leg start
+		"Winner" : "P1",					Once at leg end
+		"RoundsInLeg" : 0,					Once at leg end
+		"PbP" : []							After every round/player
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"GameTemplate" : {
+		"ID" : "ID_1",
+		"DateTime" : "2020.04.15 10:00",
+		"Players" : ["P1"],
+		"GameType" : "X01_S1_L1",
+		"Winner" : "",
+		"PlayerAVG" : [41,49],
+	"PlayByPlay" : []
+	},
+	"LegTamplate" : {
+		"Leg" : "S1L1",
+		"Winner" : "P1",
+		"RoundsInLeg" : 0,
+		"StarterOfLeg": "P1",
+		"PbP" : []
+	}
+}

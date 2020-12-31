@@ -1,0 +1,2092 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.1" />
+<title>main API documentation</title>
+<meta name="description" content="Created on Mar 22, 2020 …" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>main</code></h1>
+</header>
+<section id="section-intro">
+<p>Created on Mar 22, 2020</p>
+<p>@author: delpi</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#39;&#39;&#39;
+Created on Mar 22, 2020
+
+@author: delpi
+&#39;&#39;&#39;
+
+
+from kivy.app import App
+from kivy.uix.widget import Widget
+from kivy.properties import NumericProperty,\
+ObjectProperty,StringProperty,ListProperty, BooleanProperty, DictProperty
+from kivy.uix.screenmanager import Screen
+from kivy.clock import Clock
+from kivy.lang import Builder 
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.popup import Popup
+
+import re
+
+import game as GameHandler
+import databaseHandler as DH
+import dartsStatVisLib as dsl
+import sectorLib
+
+import json
+
+# import matplotlib
+# matplotlib.use(&#34;Qt5Agg&#34;)
+# import matplotlib.pyplot as plt
+
+
+PROFILE_TEMPLATE  = &#34;Database/Profile_Template.json&#34;
+PROFILES  = &#34;Database/Profiles.json&#34;
+GAME_TEMPLATE  = &#34;Database/Game_Template.json&#34;
+GAMES  = &#34;Database/Games.json&#34;
+
+class HomeScreen(Screen):
+    pass
+
+class GameScreen(Screen):
+    currDart = NumericProperty(1)
+    
+
+class SettingsScreen(Screen):
+    pass
+    
+
+class GameStatsScreen(Screen):
+    statText = StringProperty(&#39;&#39;)
+    
+class StatsScreen(Screen):
+    pass
+    
+class ProfilePopup(BoxLayout):
+    
+    popupText = StringProperty(&#34;Now you can create a new profile or press ESC to dismiss&#34;)
+    
+    def createProfile(self):
+        print(self.ids.ProfileName.text)
+        
+        if self.ids.ProfileName.text:
+            if App.get_running_app().dh.addProfile(str.strip(self.ids.ProfileName.text)):
+                self.popupText = &#34;New profile created: {}\n\nNow you can create a new profile or press ESC to dismiss&#34;.format(self.ids.ProfileName.text)
+                Clock.schedule_once(self.changeTextBack, 5)
+            else:
+                self.popupText = &#34;A profile with this name already exists: {}\n\nNow you can create a new profile or press ESC to dismiss&#34;.format(self.ids.ProfileName.text)
+                Clock.schedule_once(self.changeTextBack, 5)
+
+    def changeTextBack(self,dt):
+        self.popupText = &#34;Now you can create a new profile or press ESC to dismiss&#34;
+        return True
+    
+    
+class DartsGame(Widget):
+    
+    
+    def show_popup(self):
+        App.get_running_app().show_ProfilePopup()
+        
+      
+        
+class DartsApp(App):
+    
+    index = NumericProperty(-1)
+    screen_names = ListProperty([])
+    
+    isHandicapMode = BooleanProperty(False)
+    
+    dh = DH.DatabaseHandler(PROFILE_TEMPLATE, PROFILES, GAME_TEMPLATE, GAMES)
+    
+    selectedPlayerList = ListProperty([&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;])
+    
+    availablePlayerList = ListProperty(dh.getProfileNameList())
+    
+    profileShortInfoText = StringProperty(dh.getShortProfileText())
+    gameStatsText = StringProperty(&#39;&#39;)
+    currStatIndex = NumericProperty(0)
+    
+    gameCanStart = BooleanProperty(False)
+    
+    gameType = StringProperty(&#39;501&#39;)
+    gameLegNum = NumericProperty(1)
+    gameFirstTo = NumericProperty(1)
+    gameRandOrd = BooleanProperty(True)
+    
+    gameIsOn = BooleanProperty(False)
+    confNeeded = BooleanProperty(False)
+    
+    currGame = ObjectProperty(None)
+    
+    currGameStat = DictProperty({})
+    
+    playerText = ListProperty([&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;])
+    playerTextColor = ListProperty([[0, .7, .1, 1],[0, .3, .1, 1],[0, .3, .1, 1],[0, .3, .1, 1]])
+    
+    def updateSM(self,dt):
+        if self.gameIsOn:
+
+            for index in range(self.currGame.numPlayers):
+                self.playerText[index] = &#34;[b]{}\n{}[/b][size=32]\nS: {} L: {}\nLegAvg: {}  GameAvg: {}[/size]&#34;.format( \
+                                                                self.currGame.playerList[index].name, \
+                                                                self.currGame.playerList[index].currentScoreToShow, \
+                                                                self.currGame.playerList[index].setsWon, \
+                                                                self.currGame.playerList[index].legsWon, \
+                                                                round(self.currGame.playerList[index].legAvg,2), \
+                                                                round(self.currGame.playerList[index].gameAvg,2))
+                if self.currGame.currPlayerIndex == index:
+                    self.playerTextColor[index] = [0, .7, .1, 1]
+                else:
+                    self.playerTextColor[index] = [0, .3, .1, 1]
+            
+            if self.currGame.waitForConfirm != &#39;NoConfirmNeeded&#39;:
+                self.confNeeded = True
+            else:
+                self.confNeeded = False
+             
+            self.getCurrDart()
+                
+            if self.currGame.gameState == &#39;GameEnd&#39;:
+                self.gameIsOn = False
+                self.dh.addGame(self.currGame.gameStats)
+                
+                profList = []
+                for pl in self.currGame.playerList:
+                    profList.append(pl.playerDB)
+                self.dh.updateProfile(profList)
+                
+                self.currGame.gameState = &#39;DBCopiedAfterGameEnd&#39;
+                
+#                 dartList = []
+#                 for dartStat in self.currGame.playerList[0].playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;].keys():
+#                     for i in range(self.currGame.playerList[0].playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat]):
+#                         dartList.append(int(dartStat))
+#                 dartList.sort()
+#                 
+#                 x_range = (0,60) 
+#                 bins = 60
+                #plotting a histogram 
+                #plt.hist(dartList,bins, color = &#39;green&#39;, histtype = &#39;bar&#39;, rwidth = 0.8) 
+                  
+                # x-axis label 
+                #plt.xlabel(&#39;Dart Score&#39;) 
+                # frequency label 
+                #plt.ylabel(&#39;Thrown #&#39;) 
+                # plot title 
+                #plt.title(&#39;Overall Dart Stats&#39;) 
+                  
+                # function to show the plot 
+                #plt.savefig(&#39;Images/plot.png&#39;) 
+                #plt.show()
+                
+                self.root.ids.ScrnMngr.current = &#39;Game Statistics&#39;
+            
+            if self.currGame.gameState == &#39;DBCopiedAfterGameEnd&#39;:
+                self.currGameStat = self.currGame.playerList[self.currStatIndex].playerCurrentStats[&#39;X01&#39;]
+                
+                self.updateSectorStatScreen(self.currGameStat[&#39;OverallSectorStats&#39;])
+                self.gameStatsText = dsl.getGameStatText(self.selectedPlayerList[self.currStatIndex], &#39;X01&#39;, self.currGameStat)
+                
+        if self.profileShortInfoText != self.dh.getShortProfileText():
+            self.profileShortInfoText = self.dh.getShortProfileText()
+            self.updatePlayerLists()
+    
+    def get_color_from_hex(self,s):
+        &#39;&#39;&#39;Transform a hex string color to a kivy&#39;&#39;&#39;
+        
+        if s.startswith(&#39;#&#39;):
+            return self.get_color_from_hex(s[1:])
+        value = [int(x, 16) / 255. for 
+            x in re.split(&#39;([0-9a-f]{2})&#39;, s.lower()) if x !=&#39;&#39;]
+        if len(value) == 3:
+            value.append(1)
+        return value
+            
+    def updateSectorStatScreen(self, DB):
+        
+        limitList = dsl.createLimitList(DB)
+        
+        for sector in range(1,21):
+            
+            upperStr = &#39;{}U&#39;.format(sector)
+            lowerStr = &#39;{}L&#39;.format(sector)
+            tripleStr = &#39;{}T&#39;.format(sector)
+            doubleStr = &#39;{}D&#39;.format(sector)
+            
+            if upperStr in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[upperStr])
+            else:
+                color = dsl.colorPalette[0]
+            self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].upperSectorColor = self.get_color_from_hex(color)   
+            
+            if lowerStr in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[lowerStr])
+            else:
+                color = dsl.colorPalette[0]
+            self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].lowerSectorColor = self.get_color_from_hex(color)   
+            
+            if tripleStr in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[tripleStr])
+            else:
+                color = dsl.colorPalette[0]
+            self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].tripleColor = self.get_color_from_hex(color)   
+                
+            if doubleStr in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[doubleStr])
+            else:
+                color = dsl.colorPalette[0]
+            self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].doubleColor = self.get_color_from_hex(color)   
+         
+        if &#39;M&#39; in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[&#39;M&#39;])
+        else:
+            color = dsl.colorPalette[0]
+        self.root.ids.gss.ids[&#39;statBL&#39;].blackColor = self.get_color_from_hex(color)   
+        
+        if &#39;B&#39; in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[&#39;B&#39;])
+        else:
+            color = dsl.colorPalette[0]
+        self.root.ids.gss.ids[&#39;statBU&#39;].bullColor = self.get_color_from_hex(color)        
+        
+        if &#39;DB&#39; in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[&#39;DB&#39;])
+        else:
+            color = dsl.colorPalette[0]
+        self.root.ids.gss.ids[&#39;statBU&#39;].bullsEyeColor = self.get_color_from_hex(color)   
+            
+    def build(self):
+        
+        game = DartsGame()
+        self.title = &#39;DartsGenious&#39;
+        Clock.schedule_interval(self.updateSM, 1 / 60.)
+        
+        return game
+
+    def on_pause(self):
+        return True
+
+    def on_resume(self):
+        pass
+
+
+    def load_screen(self, index):
+        if index in self.screens:
+            return self.screens[index]
+        screen = Builder.load_file(self.available_screens[index])
+        self.screens[index] = screen
+        return screen
+
+    def loadData(self, file):
+        with open(file, &#34;r&#34;) as read_file:
+            return json.load(read_file)
+
+    def show_ProfilePopup(self):
+        show = ProfilePopup()
+    
+        popupWindow = Popup(title=&#34;Create Profile&#34;, content=show, size_hint=(None,None),size=(600,600))
+    
+        popupWindow.open()
+        
+        
+    def evaluatePlayerSpinners(self, playerSelected, listPosition):
+        self.selectedPlayerList[listPosition] = playerSelected
+        
+        
+        if playerSelected == &#39;-&#39;:
+            for index in range(listPosition,4):
+                self.selectedPlayerList[index] = &#39;-&#39;
+        
+        self.updatePlayerLists()
+        print(self.selectedPlayerList)
+
+
+    def updatePlayerLists(self):
+        self.availablePlayerList = self.dh.getProfileNameList()
+        
+        for selectedName in self.selectedPlayerList:
+            if (selectedName != &#39;-&#39;) and (selectedName in self.availablePlayerList):
+                self.availablePlayerList.remove(selectedName)
+                
+                
+        if self.selectedPlayerList[0] != &#39;-&#39;:
+            self.gameCanStart = True
+        else:
+            self.gameCanStart = False
+    
+    def createPlayerObjects(self):  
+        
+        playerObjectList = []
+        
+        for selectedName in self.selectedPlayerList:
+            if (selectedName != &#39;-&#39;):
+                playerObjectList.append(GameHandler.Player(self.dh.getProfile(selectedName)))
+        return playerObjectList
+        
+    def startGame(self):
+        
+        playerList = self.createPlayerObjects()
+        print(self.dh.nextGameID)
+        self.currGame = GameHandler.Game(playerList,self.gameType,self.gameFirstTo,self.gameLegNum,self.dh.nextGameID)
+        self.gameIsOn = True      
+        
+    
+    def switchPlayerStats(self):
+        self.currStatIndex += 1
+        
+        if self.currStatIndex == self.currGame.numPlayers:
+            self.currStatIndex = 0
+              
+        self.currGameStat = self.currGame.playerList[self.currStatIndex].playerCurrentStats[&#39;X01&#39;]
+                
+        self.updateSectorStatScreen(self.currGameStat[&#39;OverallSectorStats&#39;])
+        self.gameStatsText = dsl.getGameStatText(self.selectedPlayerList[self.currStatIndex], &#39;X01&#39;, self.currGameStat)
+    
+    def getCurrDart(self):
+   
+        try:
+            currDart = self.currGame.currDart
+            currRound = self.currGame.currRound
+            wfc = self.currGame.waitForConfirm
+        except:
+            currDart = 1
+            currRound = 1
+            wfc = &#39;&#39;
+        
+        if (wfc==&#39;Win&#39; or wfc==&#39;Bust&#39;) and currDart &lt; 3:
+            currDart += 1
+        
+        if currDart == 1:
+            self.root.ids.game_screen.ids.dart1.opacity = 1
+        else:
+            self.root.ids.game_screen.ids.dart1.opacity = 0   
+        
+        if currDart &lt; 3:
+            self.root.ids.game_screen.ids.dart2.opacity = 1
+        else:
+            self.root.ids.game_screen.ids.dart2.opacity = 0
+                        
+        if wfc == &#39;Normal&#39; or (currDart==3 and (wfc==&#39;Win&#39; or wfc==&#39;Bust&#39;)):
+            self.root.ids.game_screen.ids.dart3.opacity = 0
+        else:
+            self.root.ids.game_screen.ids.dart3.opacity = 1
+   
+        self.root.ids.game_screen.ids.game_info.text = &#39;Round {}&#39;.format(currRound)
+            
+
+if __name__ == &#39;__main__&#39;:
+    DartsApp().run()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="main.DartsApp"><code class="flex name class">
+<span>class <span class="ident">DartsApp</span></span>
+<span>(</span><span>**kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Application class, see module documentation for more information.</p>
+<p>:Events:
+<code>on_start</code>:
+Fired when the application is being started (before the
+:func:<code>~kivy.base.runTouchApp</code> call.
+<code>on_stop</code>:
+Fired when the application stops.
+<code>on_pause</code>:
+Fired when the application is paused by the OS.
+<code>on_resume</code>:
+Fired when the application is resumed from pause by the OS. Beware:
+you have no guarantee that this event will be fired after the
+<code>on_pause</code> event has been called.</p>
+<div class="admonition versionchanged">
+<p class="admonition-title">Changed in version:&ensp;1.7.0</p>
+<p>Parameter <code>kv_file</code> added.</p>
+</div>
+<div class="admonition versionchanged">
+<p class="admonition-title">Changed in version:&ensp;1.8.0</p>
+<p>Parameters <code>kv_file</code> and <code>kv_directory</code> are now properties of App.</p>
+</div></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DartsApp(App):
+    
+    index = NumericProperty(-1)
+    screen_names = ListProperty([])
+    
+    isHandicapMode = BooleanProperty(False)
+    
+    dh = DH.DatabaseHandler(PROFILE_TEMPLATE, PROFILES, GAME_TEMPLATE, GAMES)
+    
+    selectedPlayerList = ListProperty([&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;])
+    
+    availablePlayerList = ListProperty(dh.getProfileNameList())
+    
+    profileShortInfoText = StringProperty(dh.getShortProfileText())
+    gameStatsText = StringProperty(&#39;&#39;)
+    currStatIndex = NumericProperty(0)
+    
+    gameCanStart = BooleanProperty(False)
+    
+    gameType = StringProperty(&#39;501&#39;)
+    gameLegNum = NumericProperty(1)
+    gameFirstTo = NumericProperty(1)
+    gameRandOrd = BooleanProperty(True)
+    
+    gameIsOn = BooleanProperty(False)
+    confNeeded = BooleanProperty(False)
+    
+    currGame = ObjectProperty(None)
+    
+    currGameStat = DictProperty({})
+    
+    playerText = ListProperty([&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;])
+    playerTextColor = ListProperty([[0, .7, .1, 1],[0, .3, .1, 1],[0, .3, .1, 1],[0, .3, .1, 1]])
+    
+    def updateSM(self,dt):
+        if self.gameIsOn:
+
+            for index in range(self.currGame.numPlayers):
+                self.playerText[index] = &#34;[b]{}\n{}[/b][size=32]\nS: {} L: {}\nLegAvg: {}  GameAvg: {}[/size]&#34;.format( \
+                                                                self.currGame.playerList[index].name, \
+                                                                self.currGame.playerList[index].currentScoreToShow, \
+                                                                self.currGame.playerList[index].setsWon, \
+                                                                self.currGame.playerList[index].legsWon, \
+                                                                round(self.currGame.playerList[index].legAvg,2), \
+                                                                round(self.currGame.playerList[index].gameAvg,2))
+                if self.currGame.currPlayerIndex == index:
+                    self.playerTextColor[index] = [0, .7, .1, 1]
+                else:
+                    self.playerTextColor[index] = [0, .3, .1, 1]
+            
+            if self.currGame.waitForConfirm != &#39;NoConfirmNeeded&#39;:
+                self.confNeeded = True
+            else:
+                self.confNeeded = False
+             
+            self.getCurrDart()
+                
+            if self.currGame.gameState == &#39;GameEnd&#39;:
+                self.gameIsOn = False
+                self.dh.addGame(self.currGame.gameStats)
+                
+                profList = []
+                for pl in self.currGame.playerList:
+                    profList.append(pl.playerDB)
+                self.dh.updateProfile(profList)
+                
+                self.currGame.gameState = &#39;DBCopiedAfterGameEnd&#39;
+                
+#                 dartList = []
+#                 for dartStat in self.currGame.playerList[0].playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;].keys():
+#                     for i in range(self.currGame.playerList[0].playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat]):
+#                         dartList.append(int(dartStat))
+#                 dartList.sort()
+#                 
+#                 x_range = (0,60) 
+#                 bins = 60
+                #plotting a histogram 
+                #plt.hist(dartList,bins, color = &#39;green&#39;, histtype = &#39;bar&#39;, rwidth = 0.8) 
+                  
+                # x-axis label 
+                #plt.xlabel(&#39;Dart Score&#39;) 
+                # frequency label 
+                #plt.ylabel(&#39;Thrown #&#39;) 
+                # plot title 
+                #plt.title(&#39;Overall Dart Stats&#39;) 
+                  
+                # function to show the plot 
+                #plt.savefig(&#39;Images/plot.png&#39;) 
+                #plt.show()
+                
+                self.root.ids.ScrnMngr.current = &#39;Game Statistics&#39;
+            
+            if self.currGame.gameState == &#39;DBCopiedAfterGameEnd&#39;:
+                self.currGameStat = self.currGame.playerList[self.currStatIndex].playerCurrentStats[&#39;X01&#39;]
+                
+                self.updateSectorStatScreen(self.currGameStat[&#39;OverallSectorStats&#39;])
+                self.gameStatsText = dsl.getGameStatText(self.selectedPlayerList[self.currStatIndex], &#39;X01&#39;, self.currGameStat)
+                
+        if self.profileShortInfoText != self.dh.getShortProfileText():
+            self.profileShortInfoText = self.dh.getShortProfileText()
+            self.updatePlayerLists()
+    
+    def get_color_from_hex(self,s):
+        &#39;&#39;&#39;Transform a hex string color to a kivy&#39;&#39;&#39;
+        
+        if s.startswith(&#39;#&#39;):
+            return self.get_color_from_hex(s[1:])
+        value = [int(x, 16) / 255. for 
+            x in re.split(&#39;([0-9a-f]{2})&#39;, s.lower()) if x !=&#39;&#39;]
+        if len(value) == 3:
+            value.append(1)
+        return value
+            
+    def updateSectorStatScreen(self, DB):
+        
+        limitList = dsl.createLimitList(DB)
+        
+        for sector in range(1,21):
+            
+            upperStr = &#39;{}U&#39;.format(sector)
+            lowerStr = &#39;{}L&#39;.format(sector)
+            tripleStr = &#39;{}T&#39;.format(sector)
+            doubleStr = &#39;{}D&#39;.format(sector)
+            
+            if upperStr in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[upperStr])
+            else:
+                color = dsl.colorPalette[0]
+            self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].upperSectorColor = self.get_color_from_hex(color)   
+            
+            if lowerStr in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[lowerStr])
+            else:
+                color = dsl.colorPalette[0]
+            self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].lowerSectorColor = self.get_color_from_hex(color)   
+            
+            if tripleStr in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[tripleStr])
+            else:
+                color = dsl.colorPalette[0]
+            self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].tripleColor = self.get_color_from_hex(color)   
+                
+            if doubleStr in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[doubleStr])
+            else:
+                color = dsl.colorPalette[0]
+            self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].doubleColor = self.get_color_from_hex(color)   
+         
+        if &#39;M&#39; in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[&#39;M&#39;])
+        else:
+            color = dsl.colorPalette[0]
+        self.root.ids.gss.ids[&#39;statBL&#39;].blackColor = self.get_color_from_hex(color)   
+        
+        if &#39;B&#39; in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[&#39;B&#39;])
+        else:
+            color = dsl.colorPalette[0]
+        self.root.ids.gss.ids[&#39;statBU&#39;].bullColor = self.get_color_from_hex(color)        
+        
+        if &#39;DB&#39; in DB.keys():
+                color = dsl.getColor4Rate(limitList, DB[&#39;DB&#39;])
+        else:
+            color = dsl.colorPalette[0]
+        self.root.ids.gss.ids[&#39;statBU&#39;].bullsEyeColor = self.get_color_from_hex(color)   
+            
+    def build(self):
+        
+        game = DartsGame()
+        self.title = &#39;DartsGenious&#39;
+        Clock.schedule_interval(self.updateSM, 1 / 60.)
+        
+        return game
+
+    def on_pause(self):
+        return True
+
+    def on_resume(self):
+        pass
+
+
+    def load_screen(self, index):
+        if index in self.screens:
+            return self.screens[index]
+        screen = Builder.load_file(self.available_screens[index])
+        self.screens[index] = screen
+        return screen
+
+    def loadData(self, file):
+        with open(file, &#34;r&#34;) as read_file:
+            return json.load(read_file)
+
+    def show_ProfilePopup(self):
+        show = ProfilePopup()
+    
+        popupWindow = Popup(title=&#34;Create Profile&#34;, content=show, size_hint=(None,None),size=(600,600))
+    
+        popupWindow.open()
+        
+        
+    def evaluatePlayerSpinners(self, playerSelected, listPosition):
+        self.selectedPlayerList[listPosition] = playerSelected
+        
+        
+        if playerSelected == &#39;-&#39;:
+            for index in range(listPosition,4):
+                self.selectedPlayerList[index] = &#39;-&#39;
+        
+        self.updatePlayerLists()
+        print(self.selectedPlayerList)
+
+
+    def updatePlayerLists(self):
+        self.availablePlayerList = self.dh.getProfileNameList()
+        
+        for selectedName in self.selectedPlayerList:
+            if (selectedName != &#39;-&#39;) and (selectedName in self.availablePlayerList):
+                self.availablePlayerList.remove(selectedName)
+                
+                
+        if self.selectedPlayerList[0] != &#39;-&#39;:
+            self.gameCanStart = True
+        else:
+            self.gameCanStart = False
+    
+    def createPlayerObjects(self):  
+        
+        playerObjectList = []
+        
+        for selectedName in self.selectedPlayerList:
+            if (selectedName != &#39;-&#39;):
+                playerObjectList.append(GameHandler.Player(self.dh.getProfile(selectedName)))
+        return playerObjectList
+        
+    def startGame(self):
+        
+        playerList = self.createPlayerObjects()
+        print(self.dh.nextGameID)
+        self.currGame = GameHandler.Game(playerList,self.gameType,self.gameFirstTo,self.gameLegNum,self.dh.nextGameID)
+        self.gameIsOn = True      
+        
+    
+    def switchPlayerStats(self):
+        self.currStatIndex += 1
+        
+        if self.currStatIndex == self.currGame.numPlayers:
+            self.currStatIndex = 0
+              
+        self.currGameStat = self.currGame.playerList[self.currStatIndex].playerCurrentStats[&#39;X01&#39;]
+                
+        self.updateSectorStatScreen(self.currGameStat[&#39;OverallSectorStats&#39;])
+        self.gameStatsText = dsl.getGameStatText(self.selectedPlayerList[self.currStatIndex], &#39;X01&#39;, self.currGameStat)
+    
+    def getCurrDart(self):
+   
+        try:
+            currDart = self.currGame.currDart
+            currRound = self.currGame.currRound
+            wfc = self.currGame.waitForConfirm
+        except:
+            currDart = 1
+            currRound = 1
+            wfc = &#39;&#39;
+        
+        if (wfc==&#39;Win&#39; or wfc==&#39;Bust&#39;) and currDart &lt; 3:
+            currDart += 1
+        
+        if currDart == 1:
+            self.root.ids.game_screen.ids.dart1.opacity = 1
+        else:
+            self.root.ids.game_screen.ids.dart1.opacity = 0   
+        
+        if currDart &lt; 3:
+            self.root.ids.game_screen.ids.dart2.opacity = 1
+        else:
+            self.root.ids.game_screen.ids.dart2.opacity = 0
+                        
+        if wfc == &#39;Normal&#39; or (currDart==3 and (wfc==&#39;Win&#39; or wfc==&#39;Bust&#39;)):
+            self.root.ids.game_screen.ids.dart3.opacity = 0
+        else:
+            self.root.ids.game_screen.ids.dart3.opacity = 1
+   
+        self.root.ids.game_screen.ids.game_info.text = &#39;Round {}&#39;.format(currRound)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>kivy.app.App</li>
+<li>kivy._event.EventDispatcher</li>
+<li>kivy._event.ObjectWithUid</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="main.DartsApp.dh"><code class="name">var <span class="ident">dh</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="main.DartsApp.availablePlayerList"><code class="name">var <span class="ident">availablePlayerList</span></code></dt>
+<dd>
+<div class="desc"><p>ListProperty(defaultvalue=0, **kw)
+Property that represents a list.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: list, defaults to []
+        Specifies the default value of the property.
+
+!!! warning "Warning"
+    When assigning a list to a :class:&lt;code&gt;ListProperty&lt;/code&gt;, the list stored in
+    the property is a shallow copy of the list and not the original list. This can
+    be demonstrated with the following example::
+
+        &gt;&gt;&gt; class MyWidget(Widget):
+        &gt;&gt;&gt;     my_list = ListProperty([])
+
+        &gt;&gt;&gt; widget = MyWidget()
+        &gt;&gt;&gt; my_list = [1, 5, {'hi': 'hello'}]
+        &gt;&gt;&gt; widget.my_list = my_list
+        &gt;&gt;&gt; print(my_list is widget.my_list)
+        False
+        &gt;&gt;&gt; my_list.append(10)
+        &gt;&gt;&gt; print(my_list, widget.my_list)
+        [1, 5, {'hi': 'hello'}, 10] [1, 5, {'hi': 'hello'}]
+
+    However, changes to nested levels will affect the property as well,
+    since the property uses a shallow copy of my_list.
+
+        &gt;&gt;&gt; my_list[2]['hi'] = 'bye'
+        &gt;&gt;&gt; print(my_list, widget.my_list)
+        [1, 5, {'hi': 'bye'}, 10] [1, 5, {'hi': 'bye'}]
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.confNeeded"><code class="name">var <span class="ident">confNeeded</span></code></dt>
+<dd>
+<div class="desc"><p>BooleanProperty(defaultvalue=True, **kw)
+Property that represents only a boolean value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: boolean
+        Specifies the default value of the property.
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.currGame"><code class="name">var <span class="ident">currGame</span></code></dt>
+<dd>
+<div class="desc"><p>ObjectProperty(defaultvalue=None, rebind=False, **kw)
+Property that represents a Python object.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: object type
+        Specifies the default value of the property.
+    &lt;code&gt;rebind&lt;/code&gt;: bool, defaults to False
+        Whether kv rules using this object as an intermediate attribute
+        in a kv rule, will update the bound property when this object
+        changes.
+
+        That is the standard behavior is that if there's a kv rule
+        ``text: self.a.b.c.d``, where &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;, and &lt;code&gt;c&lt;/code&gt; are
+        properties with &lt;code&gt;rebind&lt;/code&gt; &lt;code&gt;False&lt;/code&gt; and &lt;code&gt;d&lt;/code&gt; is a
+        :class:&lt;code&gt;StringProperty&lt;/code&gt;. Then when the rule is applied, &lt;code&gt;text&lt;/code&gt;
+        becomes bound only to &lt;code&gt;d&lt;/code&gt;. If &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;, or &lt;code&gt;c&lt;/code&gt; change,
+        &lt;code&gt;text&lt;/code&gt; still remains bound to &lt;code&gt;d&lt;/code&gt;. Furthermore, if any of them
+        were &lt;code&gt;None&lt;/code&gt; when the rule was initially evaluated, e.g. &lt;code&gt;b&lt;/code&gt; was
+        &lt;code&gt;None&lt;/code&gt;; then &lt;code&gt;text&lt;/code&gt; is bound to &lt;code&gt;b&lt;/code&gt; and will not become bound
+        to &lt;code&gt;d&lt;/code&gt; even when &lt;code&gt;b&lt;/code&gt; is changed to not be &lt;code&gt;None&lt;/code&gt;.
+
+        By setting &lt;code&gt;rebind&lt;/code&gt; to &lt;code&gt;True&lt;/code&gt;, however, the rule will be
+        re-evaluated and all the properties rebound when that intermediate
+        property changes. E.g. in the example above, whenever &lt;code&gt;b&lt;/code&gt; changes
+        or becomes not &lt;code&gt;None&lt;/code&gt; if it was &lt;code&gt;None&lt;/code&gt; before, &lt;code&gt;text&lt;/code&gt; is
+        evaluated again and becomes rebound to &lt;code&gt;d&lt;/code&gt;. The overall result is
+        that &lt;code&gt;text&lt;/code&gt; is now bound to all the properties among &lt;code&gt;a&lt;/code&gt;,
+        &lt;code&gt;b&lt;/code&gt;, or &lt;code&gt;c&lt;/code&gt; that have &lt;code&gt;rebind&lt;/code&gt; set to &lt;code&gt;True&lt;/code&gt;.
+    `\*\*kwargs`: a list of keyword arguments
+        &lt;code&gt;baseclass&lt;/code&gt;
+            If kwargs includes a &lt;code&gt;baseclass&lt;/code&gt; argument, this value will be
+            used for validation: `isinstance(value, kwargs['baseclass'])`.
+
+!!! warning "Warning"
+    To mark the property as changed, you must reassign a new python object.
+
+!!! versionchanged "Changed in version:&amp;ensp;1.9.0"
+    &lt;code&gt;rebind&lt;/code&gt; has been introduced.
+
+!!! versionchanged "Changed in version:&amp;ensp;1.7.0"
+    &lt;code&gt;baseclass&lt;/code&gt; parameter added.
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.currGameStat"><code class="name">var <span class="ident">currGameStat</span></code></dt>
+<dd>
+<div class="desc"><p>DictProperty(defaultvalue=0, rebind=False, **kw)
+Property that represents a dict.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: dict, defaults to {}
+        Specifies the default value of the property.
+    &lt;code&gt;rebind&lt;/code&gt;: bool, defaults to False
+        See :class:&lt;code&gt;ObjectProperty&lt;/code&gt; for details.
+
+!!! versionchanged "Changed in version:&amp;ensp;1.9.0"
+    &lt;code&gt;rebind&lt;/code&gt; has been introduced.
+
+!!! warning "Warning"
+    Similar to :class:&lt;code&gt;ListProperty&lt;/code&gt;, when assigning a dict to a
+    :class:&lt;code&gt;DictProperty&lt;/code&gt;, the dict stored in the property is a shallow copy of the
+    dict and not the original dict. See :class:&lt;code&gt;ListProperty&lt;/code&gt; for details.
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.currStatIndex"><code class="name">var <span class="ident">currStatIndex</span></code></dt>
+<dd>
+<div class="desc"><p>NumericProperty(defaultvalue=0, **kw)
+Property that represents a numeric value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: int or float, defaults to 0
+        Specifies the default value of the property.
+
+&gt;&gt;&gt; wid = Widget()
+&gt;&gt;&gt; wid.x = 42
+&gt;&gt;&gt; print(wid.x)
+42
+&gt;&gt;&gt; wid.x = "plop"
+ Traceback (most recent call last):
+   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+   File "properties.pyx", line 93, in kivy.properties.Property.__set__
+   File "properties.pyx", line 111, in kivy.properties.Property.set
+   File "properties.pyx", line 159, in kivy.properties.NumericProperty.check
+ ValueError: NumericProperty accept only int/float
+
+!!! versionchanged "Changed in version:&amp;ensp;1.4.1"
+    NumericProperty can now accept custom text and tuple value to indicate a
+    type, like "in", "pt", "px", "cm", "mm", in the format: '10pt' or (10,
+    'pt').
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.gameCanStart"><code class="name">var <span class="ident">gameCanStart</span></code></dt>
+<dd>
+<div class="desc"><p>BooleanProperty(defaultvalue=True, **kw)
+Property that represents only a boolean value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: boolean
+        Specifies the default value of the property.
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.gameFirstTo"><code class="name">var <span class="ident">gameFirstTo</span></code></dt>
+<dd>
+<div class="desc"><p>NumericProperty(defaultvalue=0, **kw)
+Property that represents a numeric value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: int or float, defaults to 0
+        Specifies the default value of the property.
+
+&gt;&gt;&gt; wid = Widget()
+&gt;&gt;&gt; wid.x = 42
+&gt;&gt;&gt; print(wid.x)
+42
+&gt;&gt;&gt; wid.x = "plop"
+ Traceback (most recent call last):
+   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+   File "properties.pyx", line 93, in kivy.properties.Property.__set__
+   File "properties.pyx", line 111, in kivy.properties.Property.set
+   File "properties.pyx", line 159, in kivy.properties.NumericProperty.check
+ ValueError: NumericProperty accept only int/float
+
+!!! versionchanged "Changed in version:&amp;ensp;1.4.1"
+    NumericProperty can now accept custom text and tuple value to indicate a
+    type, like "in", "pt", "px", "cm", "mm", in the format: '10pt' or (10,
+    'pt').
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.gameIsOn"><code class="name">var <span class="ident">gameIsOn</span></code></dt>
+<dd>
+<div class="desc"><p>BooleanProperty(defaultvalue=True, **kw)
+Property that represents only a boolean value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: boolean
+        Specifies the default value of the property.
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.gameLegNum"><code class="name">var <span class="ident">gameLegNum</span></code></dt>
+<dd>
+<div class="desc"><p>NumericProperty(defaultvalue=0, **kw)
+Property that represents a numeric value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: int or float, defaults to 0
+        Specifies the default value of the property.
+
+&gt;&gt;&gt; wid = Widget()
+&gt;&gt;&gt; wid.x = 42
+&gt;&gt;&gt; print(wid.x)
+42
+&gt;&gt;&gt; wid.x = "plop"
+ Traceback (most recent call last):
+   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+   File "properties.pyx", line 93, in kivy.properties.Property.__set__
+   File "properties.pyx", line 111, in kivy.properties.Property.set
+   File "properties.pyx", line 159, in kivy.properties.NumericProperty.check
+ ValueError: NumericProperty accept only int/float
+
+!!! versionchanged "Changed in version:&amp;ensp;1.4.1"
+    NumericProperty can now accept custom text and tuple value to indicate a
+    type, like "in", "pt", "px", "cm", "mm", in the format: '10pt' or (10,
+    'pt').
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.gameRandOrd"><code class="name">var <span class="ident">gameRandOrd</span></code></dt>
+<dd>
+<div class="desc"><p>BooleanProperty(defaultvalue=True, **kw)
+Property that represents only a boolean value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: boolean
+        Specifies the default value of the property.
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.gameStatsText"><code class="name">var <span class="ident">gameStatsText</span></code></dt>
+<dd>
+<div class="desc"><p>StringProperty(defaultvalue='', **kw)
+Property that represents a string value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: string, defaults to ''
+        Specifies the default value of the property.
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.gameType"><code class="name">var <span class="ident">gameType</span></code></dt>
+<dd>
+<div class="desc"><p>StringProperty(defaultvalue='', **kw)
+Property that represents a string value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: string, defaults to ''
+        Specifies the default value of the property.
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.index"><code class="name">var <span class="ident">index</span></code></dt>
+<dd>
+<div class="desc"><p>NumericProperty(defaultvalue=0, **kw)
+Property that represents a numeric value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: int or float, defaults to 0
+        Specifies the default value of the property.
+
+&gt;&gt;&gt; wid = Widget()
+&gt;&gt;&gt; wid.x = 42
+&gt;&gt;&gt; print(wid.x)
+42
+&gt;&gt;&gt; wid.x = "plop"
+ Traceback (most recent call last):
+   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+   File "properties.pyx", line 93, in kivy.properties.Property.__set__
+   File "properties.pyx", line 111, in kivy.properties.Property.set
+   File "properties.pyx", line 159, in kivy.properties.NumericProperty.check
+ ValueError: NumericProperty accept only int/float
+
+!!! versionchanged "Changed in version:&amp;ensp;1.4.1"
+    NumericProperty can now accept custom text and tuple value to indicate a
+    type, like "in", "pt", "px", "cm", "mm", in the format: '10pt' or (10,
+    'pt').
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.isHandicapMode"><code class="name">var <span class="ident">isHandicapMode</span></code></dt>
+<dd>
+<div class="desc"><p>BooleanProperty(defaultvalue=True, **kw)
+Property that represents only a boolean value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: boolean
+        Specifies the default value of the property.
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.playerText"><code class="name">var <span class="ident">playerText</span></code></dt>
+<dd>
+<div class="desc"><p>ListProperty(defaultvalue=0, **kw)
+Property that represents a list.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: list, defaults to []
+        Specifies the default value of the property.
+
+!!! warning "Warning"
+    When assigning a list to a :class:&lt;code&gt;ListProperty&lt;/code&gt;, the list stored in
+    the property is a shallow copy of the list and not the original list. This can
+    be demonstrated with the following example::
+
+        &gt;&gt;&gt; class MyWidget(Widget):
+        &gt;&gt;&gt;     my_list = ListProperty([])
+
+        &gt;&gt;&gt; widget = MyWidget()
+        &gt;&gt;&gt; my_list = [1, 5, {'hi': 'hello'}]
+        &gt;&gt;&gt; widget.my_list = my_list
+        &gt;&gt;&gt; print(my_list is widget.my_list)
+        False
+        &gt;&gt;&gt; my_list.append(10)
+        &gt;&gt;&gt; print(my_list, widget.my_list)
+        [1, 5, {'hi': 'hello'}, 10] [1, 5, {'hi': 'hello'}]
+
+    However, changes to nested levels will affect the property as well,
+    since the property uses a shallow copy of my_list.
+
+        &gt;&gt;&gt; my_list[2]['hi'] = 'bye'
+        &gt;&gt;&gt; print(my_list, widget.my_list)
+        [1, 5, {'hi': 'bye'}, 10] [1, 5, {'hi': 'bye'}]
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.playerTextColor"><code class="name">var <span class="ident">playerTextColor</span></code></dt>
+<dd>
+<div class="desc"><p>ListProperty(defaultvalue=0, **kw)
+Property that represents a list.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: list, defaults to []
+        Specifies the default value of the property.
+
+!!! warning "Warning"
+    When assigning a list to a :class:&lt;code&gt;ListProperty&lt;/code&gt;, the list stored in
+    the property is a shallow copy of the list and not the original list. This can
+    be demonstrated with the following example::
+
+        &gt;&gt;&gt; class MyWidget(Widget):
+        &gt;&gt;&gt;     my_list = ListProperty([])
+
+        &gt;&gt;&gt; widget = MyWidget()
+        &gt;&gt;&gt; my_list = [1, 5, {'hi': 'hello'}]
+        &gt;&gt;&gt; widget.my_list = my_list
+        &gt;&gt;&gt; print(my_list is widget.my_list)
+        False
+        &gt;&gt;&gt; my_list.append(10)
+        &gt;&gt;&gt; print(my_list, widget.my_list)
+        [1, 5, {'hi': 'hello'}, 10] [1, 5, {'hi': 'hello'}]
+
+    However, changes to nested levels will affect the property as well,
+    since the property uses a shallow copy of my_list.
+
+        &gt;&gt;&gt; my_list[2]['hi'] = 'bye'
+        &gt;&gt;&gt; print(my_list, widget.my_list)
+        [1, 5, {'hi': 'bye'}, 10] [1, 5, {'hi': 'bye'}]
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.profileShortInfoText"><code class="name">var <span class="ident">profileShortInfoText</span></code></dt>
+<dd>
+<div class="desc"><p>StringProperty(defaultvalue='', **kw)
+Property that represents a string value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: string, defaults to ''
+        Specifies the default value of the property.
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.screen_names"><code class="name">var <span class="ident">screen_names</span></code></dt>
+<dd>
+<div class="desc"><p>ListProperty(defaultvalue=0, **kw)
+Property that represents a list.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: list, defaults to []
+        Specifies the default value of the property.
+
+!!! warning "Warning"
+    When assigning a list to a :class:&lt;code&gt;ListProperty&lt;/code&gt;, the list stored in
+    the property is a shallow copy of the list and not the original list. This can
+    be demonstrated with the following example::
+
+        &gt;&gt;&gt; class MyWidget(Widget):
+        &gt;&gt;&gt;     my_list = ListProperty([])
+
+        &gt;&gt;&gt; widget = MyWidget()
+        &gt;&gt;&gt; my_list = [1, 5, {'hi': 'hello'}]
+        &gt;&gt;&gt; widget.my_list = my_list
+        &gt;&gt;&gt; print(my_list is widget.my_list)
+        False
+        &gt;&gt;&gt; my_list.append(10)
+        &gt;&gt;&gt; print(my_list, widget.my_list)
+        [1, 5, {'hi': 'hello'}, 10] [1, 5, {'hi': 'hello'}]
+
+    However, changes to nested levels will affect the property as well,
+    since the property uses a shallow copy of my_list.
+
+        &gt;&gt;&gt; my_list[2]['hi'] = 'bye'
+        &gt;&gt;&gt; print(my_list, widget.my_list)
+        [1, 5, {'hi': 'bye'}, 10] [1, 5, {'hi': 'bye'}]
+</code></pre></div>
+</dd>
+<dt id="main.DartsApp.selectedPlayerList"><code class="name">var <span class="ident">selectedPlayerList</span></code></dt>
+<dd>
+<div class="desc"><p>ListProperty(defaultvalue=0, **kw)
+Property that represents a list.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: list, defaults to []
+        Specifies the default value of the property.
+
+!!! warning "Warning"
+    When assigning a list to a :class:&lt;code&gt;ListProperty&lt;/code&gt;, the list stored in
+    the property is a shallow copy of the list and not the original list. This can
+    be demonstrated with the following example::
+
+        &gt;&gt;&gt; class MyWidget(Widget):
+        &gt;&gt;&gt;     my_list = ListProperty([])
+
+        &gt;&gt;&gt; widget = MyWidget()
+        &gt;&gt;&gt; my_list = [1, 5, {'hi': 'hello'}]
+        &gt;&gt;&gt; widget.my_list = my_list
+        &gt;&gt;&gt; print(my_list is widget.my_list)
+        False
+        &gt;&gt;&gt; my_list.append(10)
+        &gt;&gt;&gt; print(my_list, widget.my_list)
+        [1, 5, {'hi': 'hello'}, 10] [1, 5, {'hi': 'hello'}]
+
+    However, changes to nested levels will affect the property as well,
+    since the property uses a shallow copy of my_list.
+
+        &gt;&gt;&gt; my_list[2]['hi'] = 'bye'
+        &gt;&gt;&gt; print(my_list, widget.my_list)
+        [1, 5, {'hi': 'bye'}, 10] [1, 5, {'hi': 'bye'}]
+</code></pre></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="main.DartsApp.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initializes the application; it will be called only once.
+If this method returns a widget (tree), it will be used as the root
+widget and added to the window.</p>
+<p>:return:
+None or a root :class:<code>~kivy.uix.widget.Widget</code> instance
+if no self.root exists.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self):
+    
+    game = DartsGame()
+    self.title = &#39;DartsGenious&#39;
+    Clock.schedule_interval(self.updateSM, 1 / 60.)
+    
+    return game</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.createPlayerObjects"><code class="name flex">
+<span>def <span class="ident">createPlayerObjects</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def createPlayerObjects(self):  
+    
+    playerObjectList = []
+    
+    for selectedName in self.selectedPlayerList:
+        if (selectedName != &#39;-&#39;):
+            playerObjectList.append(GameHandler.Player(self.dh.getProfile(selectedName)))
+    return playerObjectList</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.evaluatePlayerSpinners"><code class="name flex">
+<span>def <span class="ident">evaluatePlayerSpinners</span></span>(<span>self, playerSelected, listPosition)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def evaluatePlayerSpinners(self, playerSelected, listPosition):
+    self.selectedPlayerList[listPosition] = playerSelected
+    
+    
+    if playerSelected == &#39;-&#39;:
+        for index in range(listPosition,4):
+            self.selectedPlayerList[index] = &#39;-&#39;
+    
+    self.updatePlayerLists()
+    print(self.selectedPlayerList)</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.getCurrDart"><code class="name flex">
+<span>def <span class="ident">getCurrDart</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getCurrDart(self):
+
+    try:
+        currDart = self.currGame.currDart
+        currRound = self.currGame.currRound
+        wfc = self.currGame.waitForConfirm
+    except:
+        currDart = 1
+        currRound = 1
+        wfc = &#39;&#39;
+    
+    if (wfc==&#39;Win&#39; or wfc==&#39;Bust&#39;) and currDart &lt; 3:
+        currDart += 1
+    
+    if currDart == 1:
+        self.root.ids.game_screen.ids.dart1.opacity = 1
+    else:
+        self.root.ids.game_screen.ids.dart1.opacity = 0   
+    
+    if currDart &lt; 3:
+        self.root.ids.game_screen.ids.dart2.opacity = 1
+    else:
+        self.root.ids.game_screen.ids.dart2.opacity = 0
+                    
+    if wfc == &#39;Normal&#39; or (currDart==3 and (wfc==&#39;Win&#39; or wfc==&#39;Bust&#39;)):
+        self.root.ids.game_screen.ids.dart3.opacity = 0
+    else:
+        self.root.ids.game_screen.ids.dart3.opacity = 1
+
+    self.root.ids.game_screen.ids.game_info.text = &#39;Round {}&#39;.format(currRound)</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.get_color_from_hex"><code class="name flex">
+<span>def <span class="ident">get_color_from_hex</span></span>(<span>self, s)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Transform a hex string color to a kivy</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_color_from_hex(self,s):
+    &#39;&#39;&#39;Transform a hex string color to a kivy&#39;&#39;&#39;
+    
+    if s.startswith(&#39;#&#39;):
+        return self.get_color_from_hex(s[1:])
+    value = [int(x, 16) / 255. for 
+        x in re.split(&#39;([0-9a-f]{2})&#39;, s.lower()) if x !=&#39;&#39;]
+    if len(value) == 3:
+        value.append(1)
+    return value</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.loadData"><code class="name flex">
+<span>def <span class="ident">loadData</span></span>(<span>self, file)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def loadData(self, file):
+    with open(file, &#34;r&#34;) as read_file:
+        return json.load(read_file)</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.load_screen"><code class="name flex">
+<span>def <span class="ident">load_screen</span></span>(<span>self, index)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_screen(self, index):
+    if index in self.screens:
+        return self.screens[index]
+    screen = Builder.load_file(self.available_screens[index])
+    self.screens[index] = screen
+    return screen</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.on_pause"><code class="name flex">
+<span>def <span class="ident">on_pause</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Event handler called when Pause mode is requested. You should
+return True if your app can go into Pause mode, otherwise
+return False and your application will be stopped.</p>
+<p>You cannot control when the application is going to go into this mode.
+It's determined by the Operating System and mostly used for mobile
+devices (android/ios) and for resizing.</p>
+<p>The default return value is True.</p>
+<div class="admonition versionadded">
+<p class="admonition-title">Added in version:&ensp;1.1.0</p>
+</div>
+<div class="admonition versionchanged">
+<p class="admonition-title">Changed in version:&ensp;1.10.0</p>
+<p>The default return value is now True.</p>
+</div></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def on_pause(self):
+    return True</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.on_resume"><code class="name flex">
+<span>def <span class="ident">on_resume</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Event handler called when your application is resuming from
+the Pause mode.</p>
+<div class="admonition versionadded">
+<p class="admonition-title">Added in version:&ensp;1.1.0</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When resuming, the OpenGL Context might have been damaged / freed.
+This is where you can reconstruct some of your OpenGL state
+e.g. FBO content.</p>
+</div></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def on_resume(self):
+    pass</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.show_ProfilePopup"><code class="name flex">
+<span>def <span class="ident">show_ProfilePopup</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_ProfilePopup(self):
+    show = ProfilePopup()
+
+    popupWindow = Popup(title=&#34;Create Profile&#34;, content=show, size_hint=(None,None),size=(600,600))
+
+    popupWindow.open()</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.startGame"><code class="name flex">
+<span>def <span class="ident">startGame</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def startGame(self):
+    
+    playerList = self.createPlayerObjects()
+    print(self.dh.nextGameID)
+    self.currGame = GameHandler.Game(playerList,self.gameType,self.gameFirstTo,self.gameLegNum,self.dh.nextGameID)
+    self.gameIsOn = True      </code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.switchPlayerStats"><code class="name flex">
+<span>def <span class="ident">switchPlayerStats</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def switchPlayerStats(self):
+    self.currStatIndex += 1
+    
+    if self.currStatIndex == self.currGame.numPlayers:
+        self.currStatIndex = 0
+          
+    self.currGameStat = self.currGame.playerList[self.currStatIndex].playerCurrentStats[&#39;X01&#39;]
+            
+    self.updateSectorStatScreen(self.currGameStat[&#39;OverallSectorStats&#39;])
+    self.gameStatsText = dsl.getGameStatText(self.selectedPlayerList[self.currStatIndex], &#39;X01&#39;, self.currGameStat)</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.updatePlayerLists"><code class="name flex">
+<span>def <span class="ident">updatePlayerLists</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def updatePlayerLists(self):
+    self.availablePlayerList = self.dh.getProfileNameList()
+    
+    for selectedName in self.selectedPlayerList:
+        if (selectedName != &#39;-&#39;) and (selectedName in self.availablePlayerList):
+            self.availablePlayerList.remove(selectedName)
+            
+            
+    if self.selectedPlayerList[0] != &#39;-&#39;:
+        self.gameCanStart = True
+    else:
+        self.gameCanStart = False</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.updateSM"><code class="name flex">
+<span>def <span class="ident">updateSM</span></span>(<span>self, dt)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">    def updateSM(self,dt):
+        if self.gameIsOn:
+
+            for index in range(self.currGame.numPlayers):
+                self.playerText[index] = &#34;[b]{}\n{}[/b][size=32]\nS: {} L: {}\nLegAvg: {}  GameAvg: {}[/size]&#34;.format( \
+                                                                self.currGame.playerList[index].name, \
+                                                                self.currGame.playerList[index].currentScoreToShow, \
+                                                                self.currGame.playerList[index].setsWon, \
+                                                                self.currGame.playerList[index].legsWon, \
+                                                                round(self.currGame.playerList[index].legAvg,2), \
+                                                                round(self.currGame.playerList[index].gameAvg,2))
+                if self.currGame.currPlayerIndex == index:
+                    self.playerTextColor[index] = [0, .7, .1, 1]
+                else:
+                    self.playerTextColor[index] = [0, .3, .1, 1]
+            
+            if self.currGame.waitForConfirm != &#39;NoConfirmNeeded&#39;:
+                self.confNeeded = True
+            else:
+                self.confNeeded = False
+             
+            self.getCurrDart()
+                
+            if self.currGame.gameState == &#39;GameEnd&#39;:
+                self.gameIsOn = False
+                self.dh.addGame(self.currGame.gameStats)
+                
+                profList = []
+                for pl in self.currGame.playerList:
+                    profList.append(pl.playerDB)
+                self.dh.updateProfile(profList)
+                
+                self.currGame.gameState = &#39;DBCopiedAfterGameEnd&#39;
+                
+#                 dartList = []
+#                 for dartStat in self.currGame.playerList[0].playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;].keys():
+#                     for i in range(self.currGame.playerList[0].playerDB[&#39;Stats&#39;][&#39;X01&#39;][&#39;OverallDartStats&#39;][dartStat]):
+#                         dartList.append(int(dartStat))
+#                 dartList.sort()
+#                 
+#                 x_range = (0,60) 
+#                 bins = 60
+                #plotting a histogram 
+                #plt.hist(dartList,bins, color = &#39;green&#39;, histtype = &#39;bar&#39;, rwidth = 0.8) 
+                  
+                # x-axis label 
+                #plt.xlabel(&#39;Dart Score&#39;) 
+                # frequency label 
+                #plt.ylabel(&#39;Thrown #&#39;) 
+                # plot title 
+                #plt.title(&#39;Overall Dart Stats&#39;) 
+                  
+                # function to show the plot 
+                #plt.savefig(&#39;Images/plot.png&#39;) 
+                #plt.show()
+                
+                self.root.ids.ScrnMngr.current = &#39;Game Statistics&#39;
+            
+            if self.currGame.gameState == &#39;DBCopiedAfterGameEnd&#39;:
+                self.currGameStat = self.currGame.playerList[self.currStatIndex].playerCurrentStats[&#39;X01&#39;]
+                
+                self.updateSectorStatScreen(self.currGameStat[&#39;OverallSectorStats&#39;])
+                self.gameStatsText = dsl.getGameStatText(self.selectedPlayerList[self.currStatIndex], &#39;X01&#39;, self.currGameStat)
+                
+        if self.profileShortInfoText != self.dh.getShortProfileText():
+            self.profileShortInfoText = self.dh.getShortProfileText()
+            self.updatePlayerLists()</code></pre>
+</details>
+</dd>
+<dt id="main.DartsApp.updateSectorStatScreen"><code class="name flex">
+<span>def <span class="ident">updateSectorStatScreen</span></span>(<span>self, DB)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def updateSectorStatScreen(self, DB):
+    
+    limitList = dsl.createLimitList(DB)
+    
+    for sector in range(1,21):
+        
+        upperStr = &#39;{}U&#39;.format(sector)
+        lowerStr = &#39;{}L&#39;.format(sector)
+        tripleStr = &#39;{}T&#39;.format(sector)
+        doubleStr = &#39;{}D&#39;.format(sector)
+        
+        if upperStr in DB.keys():
+            color = dsl.getColor4Rate(limitList, DB[upperStr])
+        else:
+            color = dsl.colorPalette[0]
+        self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].upperSectorColor = self.get_color_from_hex(color)   
+        
+        if lowerStr in DB.keys():
+            color = dsl.getColor4Rate(limitList, DB[lowerStr])
+        else:
+            color = dsl.colorPalette[0]
+        self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].lowerSectorColor = self.get_color_from_hex(color)   
+        
+        if tripleStr in DB.keys():
+            color = dsl.getColor4Rate(limitList, DB[tripleStr])
+        else:
+            color = dsl.colorPalette[0]
+        self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].tripleColor = self.get_color_from_hex(color)   
+            
+        if doubleStr in DB.keys():
+            color = dsl.getColor4Rate(limitList, DB[doubleStr])
+        else:
+            color = dsl.colorPalette[0]
+        self.root.ids.gss.ids[&#39;stat{}&#39;.format(sector)].doubleColor = self.get_color_from_hex(color)   
+     
+    if &#39;M&#39; in DB.keys():
+            color = dsl.getColor4Rate(limitList, DB[&#39;M&#39;])
+    else:
+        color = dsl.colorPalette[0]
+    self.root.ids.gss.ids[&#39;statBL&#39;].blackColor = self.get_color_from_hex(color)   
+    
+    if &#39;B&#39; in DB.keys():
+            color = dsl.getColor4Rate(limitList, DB[&#39;B&#39;])
+    else:
+        color = dsl.colorPalette[0]
+    self.root.ids.gss.ids[&#39;statBU&#39;].bullColor = self.get_color_from_hex(color)        
+    
+    if &#39;DB&#39; in DB.keys():
+            color = dsl.getColor4Rate(limitList, DB[&#39;DB&#39;])
+    else:
+        color = dsl.colorPalette[0]
+    self.root.ids.gss.ids[&#39;statBU&#39;].bullsEyeColor = self.get_color_from_hex(color)   </code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="main.DartsGame"><code class="flex name class">
+<span>class <span class="ident">DartsGame</span></span>
+<span>(</span><span>**kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Widget class. See module documentation for more information.</p>
+<p>:Events:
+<code>on_touch_down</code>: <code>(touch, )</code>
+Fired when a new touch event occurs. <code>touch</code> is the touch object.
+<code>on_touch_move</code>: <code>(touch, )</code>
+Fired when an existing touch moves. <code>touch</code> is the touch object.
+<code>on_touch_up</code>: <code>(touch, )</code>
+Fired when an existing touch disappears. <code>touch</code> is the touch
+object.
+<code>on_kv_post</code>: <code>(base_widget, )</code>
+Fired after all the kv rules associated with the widget
+and all other widgets that are in any of those rules have had
+all their kv rules applied. <code>base_widget</code> is the base-most widget
+whose instantiation triggered the kv rules (i.e. the widget
+instantiated from Python, e.g. <code>MyWidget()</code>).</p>
+<pre><code>    !!! versionchanged "Changed in version:&amp;ensp;1.11.0"
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Adding a <code>__del__</code> method to a class derived from Widget with Python
+prior to 3.4 will disable automatic garbage collection for instances
+of that class. This is because the Widget class creates reference
+cycles, thereby <code>preventing garbage collection
+&lt;https://docs.python.org/2/library/gc.html#gc.garbage&gt;</code>_.</p>
+</div>
+<div class="admonition versionchanged">
+<p class="admonition-title">Changed in version:&ensp;1.0.9</p>
+<p>Everything related to event properties has been moved to the
+:class:<code>~kivy.event.EventDispatcher</code>. Event properties can now be used
+when contructing a simple class without subclassing :class:<code>Widget</code>.</p>
+</div>
+<div class="admonition versionchanged">
+<p class="admonition-title">Changed in version:&ensp;1.5.0</p>
+<p>The constructor now accepts on_* arguments to automatically bind
+callbacks to properties or events, as in the Kv language.</p>
+</div></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DartsGame(Widget):
+    
+    
+    def show_popup(self):
+        App.get_running_app().show_ProfilePopup()</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>kivy.uix.widget.Widget</li>
+<li>kivy.uix.widget.WidgetBase</li>
+<li>kivy._event.EventDispatcher</li>
+<li>kivy._event.ObjectWithUid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="main.DartsGame.show_popup"><code class="name flex">
+<span>def <span class="ident">show_popup</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_popup(self):
+    App.get_running_app().show_ProfilePopup()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="main.GameScreen"><code class="flex name class">
+<span>class <span class="ident">GameScreen</span></span>
+<span>(</span><span>**kw)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Screen is an element intended to be used with a :class:<code>ScreenManager</code>.
+Check module documentation for more information.</p>
+<p>:Events:
+<code>on_pre_enter</code>: ()
+Event fired when the screen is about to be used: the entering
+animation is started.
+<code>on_enter</code>: ()
+Event fired when the screen is displayed: the entering animation is
+complete.
+<code>on_pre_leave</code>: ()
+Event fired when the screen is about to be removed: the leaving
+animation is started.
+<code>on_leave</code>: ()
+Event fired when the screen is removed: the leaving animation is
+finished.</p>
+<div class="admonition versionchanged">
+<p class="admonition-title">Changed in version:&ensp;1.6.0</p>
+<p>Events <code>on_pre_enter</code>, <code>on_enter</code>, <code>on_pre_leave</code> and <code>on_leave</code> were
+added.</p>
+</div></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class GameScreen(Screen):
+    currDart = NumericProperty(1)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>kivy.uix.screenmanager.Screen</li>
+<li>kivy.uix.relativelayout.RelativeLayout</li>
+<li>kivy.uix.floatlayout.FloatLayout</li>
+<li>kivy.uix.layout.Layout</li>
+<li>kivy.uix.widget.Widget</li>
+<li>kivy.uix.widget.WidgetBase</li>
+<li>kivy._event.EventDispatcher</li>
+<li>kivy._event.ObjectWithUid</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="main.GameScreen.currDart"><code class="name">var <span class="ident">currDart</span></code></dt>
+<dd>
+<div class="desc"><p>NumericProperty(defaultvalue=0, **kw)
+Property that represents a numeric value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: int or float, defaults to 0
+        Specifies the default value of the property.
+
+&gt;&gt;&gt; wid = Widget()
+&gt;&gt;&gt; wid.x = 42
+&gt;&gt;&gt; print(wid.x)
+42
+&gt;&gt;&gt; wid.x = "plop"
+ Traceback (most recent call last):
+   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+   File "properties.pyx", line 93, in kivy.properties.Property.__set__
+   File "properties.pyx", line 111, in kivy.properties.Property.set
+   File "properties.pyx", line 159, in kivy.properties.NumericProperty.check
+ ValueError: NumericProperty accept only int/float
+
+!!! versionchanged "Changed in version:&amp;ensp;1.4.1"
+    NumericProperty can now accept custom text and tuple value to indicate a
+    type, like "in", "pt", "px", "cm", "mm", in the format: '10pt' or (10,
+    'pt').
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="main.GameStatsScreen"><code class="flex name class">
+<span>class <span class="ident">GameStatsScreen</span></span>
+<span>(</span><span>**kw)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Screen is an element intended to be used with a :class:<code>ScreenManager</code>.
+Check module documentation for more information.</p>
+<p>:Events:
+<code>on_pre_enter</code>: ()
+Event fired when the screen is about to be used: the entering
+animation is started.
+<code>on_enter</code>: ()
+Event fired when the screen is displayed: the entering animation is
+complete.
+<code>on_pre_leave</code>: ()
+Event fired when the screen is about to be removed: the leaving
+animation is started.
+<code>on_leave</code>: ()
+Event fired when the screen is removed: the leaving animation is
+finished.</p>
+<div class="admonition versionchanged">
+<p class="admonition-title">Changed in version:&ensp;1.6.0</p>
+<p>Events <code>on_pre_enter</code>, <code>on_enter</code>, <code>on_pre_leave</code> and <code>on_leave</code> were
+added.</p>
+</div></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class GameStatsScreen(Screen):
+    statText = StringProperty(&#39;&#39;)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>kivy.uix.screenmanager.Screen</li>
+<li>kivy.uix.relativelayout.RelativeLayout</li>
+<li>kivy.uix.floatlayout.FloatLayout</li>
+<li>kivy.uix.layout.Layout</li>
+<li>kivy.uix.widget.Widget</li>
+<li>kivy.uix.widget.WidgetBase</li>
+<li>kivy._event.EventDispatcher</li>
+<li>kivy._event.ObjectWithUid</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="main.GameStatsScreen.statText"><code class="name">var <span class="ident">statText</span></code></dt>
+<dd>
+<div class="desc"><p>StringProperty(defaultvalue='', **kw)
+Property that represents a string value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: string, defaults to ''
+        Specifies the default value of the property.
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="main.HomeScreen"><code class="flex name class">
+<span>class <span class="ident">HomeScreen</span></span>
+<span>(</span><span>**kw)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Screen is an element intended to be used with a :class:<code>ScreenManager</code>.
+Check module documentation for more information.</p>
+<p>:Events:
+<code>on_pre_enter</code>: ()
+Event fired when the screen is about to be used: the entering
+animation is started.
+<code>on_enter</code>: ()
+Event fired when the screen is displayed: the entering animation is
+complete.
+<code>on_pre_leave</code>: ()
+Event fired when the screen is about to be removed: the leaving
+animation is started.
+<code>on_leave</code>: ()
+Event fired when the screen is removed: the leaving animation is
+finished.</p>
+<div class="admonition versionchanged">
+<p class="admonition-title">Changed in version:&ensp;1.6.0</p>
+<p>Events <code>on_pre_enter</code>, <code>on_enter</code>, <code>on_pre_leave</code> and <code>on_leave</code> were
+added.</p>
+</div></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class HomeScreen(Screen):
+    pass</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>kivy.uix.screenmanager.Screen</li>
+<li>kivy.uix.relativelayout.RelativeLayout</li>
+<li>kivy.uix.floatlayout.FloatLayout</li>
+<li>kivy.uix.layout.Layout</li>
+<li>kivy.uix.widget.Widget</li>
+<li>kivy.uix.widget.WidgetBase</li>
+<li>kivy._event.EventDispatcher</li>
+<li>kivy._event.ObjectWithUid</li>
+</ul>
+</dd>
+<dt id="main.ProfilePopup"><code class="flex name class">
+<span>class <span class="ident">ProfilePopup</span></span>
+<span>(</span><span>**kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Box layout class. See module documentation for more information.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ProfilePopup(BoxLayout):
+    
+    popupText = StringProperty(&#34;Now you can create a new profile or press ESC to dismiss&#34;)
+    
+    def createProfile(self):
+        print(self.ids.ProfileName.text)
+        
+        if self.ids.ProfileName.text:
+            if App.get_running_app().dh.addProfile(str.strip(self.ids.ProfileName.text)):
+                self.popupText = &#34;New profile created: {}\n\nNow you can create a new profile or press ESC to dismiss&#34;.format(self.ids.ProfileName.text)
+                Clock.schedule_once(self.changeTextBack, 5)
+            else:
+                self.popupText = &#34;A profile with this name already exists: {}\n\nNow you can create a new profile or press ESC to dismiss&#34;.format(self.ids.ProfileName.text)
+                Clock.schedule_once(self.changeTextBack, 5)
+
+    def changeTextBack(self,dt):
+        self.popupText = &#34;Now you can create a new profile or press ESC to dismiss&#34;
+        return True</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>kivy.uix.boxlayout.BoxLayout</li>
+<li>kivy.uix.layout.Layout</li>
+<li>kivy.uix.widget.Widget</li>
+<li>kivy.uix.widget.WidgetBase</li>
+<li>kivy._event.EventDispatcher</li>
+<li>kivy._event.ObjectWithUid</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="main.ProfilePopup.popupText"><code class="name">var <span class="ident">popupText</span></code></dt>
+<dd>
+<div class="desc"><p>StringProperty(defaultvalue='', **kw)
+Property that represents a string value.</p>
+<pre><code>:Parameters:
+    &lt;code&gt;defaultvalue&lt;/code&gt;: string, defaults to ''
+        Specifies the default value of the property.
+</code></pre></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="main.ProfilePopup.changeTextBack"><code class="name flex">
+<span>def <span class="ident">changeTextBack</span></span>(<span>self, dt)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def changeTextBack(self,dt):
+    self.popupText = &#34;Now you can create a new profile or press ESC to dismiss&#34;
+    return True</code></pre>
+</details>
+</dd>
+<dt id="main.ProfilePopup.createProfile"><code class="name flex">
+<span>def <span class="ident">createProfile</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def createProfile(self):
+    print(self.ids.ProfileName.text)
+    
+    if self.ids.ProfileName.text:
+        if App.get_running_app().dh.addProfile(str.strip(self.ids.ProfileName.text)):
+            self.popupText = &#34;New profile created: {}\n\nNow you can create a new profile or press ESC to dismiss&#34;.format(self.ids.ProfileName.text)
+            Clock.schedule_once(self.changeTextBack, 5)
+        else:
+            self.popupText = &#34;A profile with this name already exists: {}\n\nNow you can create a new profile or press ESC to dismiss&#34;.format(self.ids.ProfileName.text)
+            Clock.schedule_once(self.changeTextBack, 5)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="main.SettingsScreen"><code class="flex name class">
+<span>class <span class="ident">SettingsScreen</span></span>
+<span>(</span><span>**kw)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Screen is an element intended to be used with a :class:<code>ScreenManager</code>.
+Check module documentation for more information.</p>
+<p>:Events:
+<code>on_pre_enter</code>: ()
+Event fired when the screen is about to be used: the entering
+animation is started.
+<code>on_enter</code>: ()
+Event fired when the screen is displayed: the entering animation is
+complete.
+<code>on_pre_leave</code>: ()
+Event fired when the screen is about to be removed: the leaving
+animation is started.
+<code>on_leave</code>: ()
+Event fired when the screen is removed: the leaving animation is
+finished.</p>
+<div class="admonition versionchanged">
+<p class="admonition-title">Changed in version:&ensp;1.6.0</p>
+<p>Events <code>on_pre_enter</code>, <code>on_enter</code>, <code>on_pre_leave</code> and <code>on_leave</code> were
+added.</p>
+</div></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SettingsScreen(Screen):
+    pass</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>kivy.uix.screenmanager.Screen</li>
+<li>kivy.uix.relativelayout.RelativeLayout</li>
+<li>kivy.uix.floatlayout.FloatLayout</li>
+<li>kivy.uix.layout.Layout</li>
+<li>kivy.uix.widget.Widget</li>
+<li>kivy.uix.widget.WidgetBase</li>
+<li>kivy._event.EventDispatcher</li>
+<li>kivy._event.ObjectWithUid</li>
+</ul>
+</dd>
+<dt id="main.StatsScreen"><code class="flex name class">
+<span>class <span class="ident">StatsScreen</span></span>
+<span>(</span><span>**kw)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Screen is an element intended to be used with a :class:<code>ScreenManager</code>.
+Check module documentation for more information.</p>
+<p>:Events:
+<code>on_pre_enter</code>: ()
+Event fired when the screen is about to be used: the entering
+animation is started.
+<code>on_enter</code>: ()
+Event fired when the screen is displayed: the entering animation is
+complete.
+<code>on_pre_leave</code>: ()
+Event fired when the screen is about to be removed: the leaving
+animation is started.
+<code>on_leave</code>: ()
+Event fired when the screen is removed: the leaving animation is
+finished.</p>
+<div class="admonition versionchanged">
+<p class="admonition-title">Changed in version:&ensp;1.6.0</p>
+<p>Events <code>on_pre_enter</code>, <code>on_enter</code>, <code>on_pre_leave</code> and <code>on_leave</code> were
+added.</p>
+</div></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StatsScreen(Screen):
+    pass</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>kivy.uix.screenmanager.Screen</li>
+<li>kivy.uix.relativelayout.RelativeLayout</li>
+<li>kivy.uix.floatlayout.FloatLayout</li>
+<li>kivy.uix.layout.Layout</li>
+<li>kivy.uix.widget.Widget</li>
+<li>kivy.uix.widget.WidgetBase</li>
+<li>kivy._event.EventDispatcher</li>
+<li>kivy._event.ObjectWithUid</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="main.DartsApp" href="#main.DartsApp">DartsApp</a></code></h4>
+<ul class="">
+<li><code><a title="main.DartsApp.availablePlayerList" href="#main.DartsApp.availablePlayerList">availablePlayerList</a></code></li>
+<li><code><a title="main.DartsApp.build" href="#main.DartsApp.build">build</a></code></li>
+<li><code><a title="main.DartsApp.confNeeded" href="#main.DartsApp.confNeeded">confNeeded</a></code></li>
+<li><code><a title="main.DartsApp.createPlayerObjects" href="#main.DartsApp.createPlayerObjects">createPlayerObjects</a></code></li>
+<li><code><a title="main.DartsApp.currGame" href="#main.DartsApp.currGame">currGame</a></code></li>
+<li><code><a title="main.DartsApp.currGameStat" href="#main.DartsApp.currGameStat">currGameStat</a></code></li>
+<li><code><a title="main.DartsApp.currStatIndex" href="#main.DartsApp.currStatIndex">currStatIndex</a></code></li>
+<li><code><a title="main.DartsApp.dh" href="#main.DartsApp.dh">dh</a></code></li>
+<li><code><a title="main.DartsApp.evaluatePlayerSpinners" href="#main.DartsApp.evaluatePlayerSpinners">evaluatePlayerSpinners</a></code></li>
+<li><code><a title="main.DartsApp.gameCanStart" href="#main.DartsApp.gameCanStart">gameCanStart</a></code></li>
+<li><code><a title="main.DartsApp.gameFirstTo" href="#main.DartsApp.gameFirstTo">gameFirstTo</a></code></li>
+<li><code><a title="main.DartsApp.gameIsOn" href="#main.DartsApp.gameIsOn">gameIsOn</a></code></li>
+<li><code><a title="main.DartsApp.gameLegNum" href="#main.DartsApp.gameLegNum">gameLegNum</a></code></li>
+<li><code><a title="main.DartsApp.gameRandOrd" href="#main.DartsApp.gameRandOrd">gameRandOrd</a></code></li>
+<li><code><a title="main.DartsApp.gameStatsText" href="#main.DartsApp.gameStatsText">gameStatsText</a></code></li>
+<li><code><a title="main.DartsApp.gameType" href="#main.DartsApp.gameType">gameType</a></code></li>
+<li><code><a title="main.DartsApp.getCurrDart" href="#main.DartsApp.getCurrDart">getCurrDart</a></code></li>
+<li><code><a title="main.DartsApp.get_color_from_hex" href="#main.DartsApp.get_color_from_hex">get_color_from_hex</a></code></li>
+<li><code><a title="main.DartsApp.index" href="#main.DartsApp.index">index</a></code></li>
+<li><code><a title="main.DartsApp.isHandicapMode" href="#main.DartsApp.isHandicapMode">isHandicapMode</a></code></li>
+<li><code><a title="main.DartsApp.loadData" href="#main.DartsApp.loadData">loadData</a></code></li>
+<li><code><a title="main.DartsApp.load_screen" href="#main.DartsApp.load_screen">load_screen</a></code></li>
+<li><code><a title="main.DartsApp.on_pause" href="#main.DartsApp.on_pause">on_pause</a></code></li>
+<li><code><a title="main.DartsApp.on_resume" href="#main.DartsApp.on_resume">on_resume</a></code></li>
+<li><code><a title="main.DartsApp.playerText" href="#main.DartsApp.playerText">playerText</a></code></li>
+<li><code><a title="main.DartsApp.playerTextColor" href="#main.DartsApp.playerTextColor">playerTextColor</a></code></li>
+<li><code><a title="main.DartsApp.profileShortInfoText" href="#main.DartsApp.profileShortInfoText">profileShortInfoText</a></code></li>
+<li><code><a title="main.DartsApp.screen_names" href="#main.DartsApp.screen_names">screen_names</a></code></li>
+<li><code><a title="main.DartsApp.selectedPlayerList" href="#main.DartsApp.selectedPlayerList">selectedPlayerList</a></code></li>
+<li><code><a title="main.DartsApp.show_ProfilePopup" href="#main.DartsApp.show_ProfilePopup">show_ProfilePopup</a></code></li>
+<li><code><a title="main.DartsApp.startGame" href="#main.DartsApp.startGame">startGame</a></code></li>
+<li><code><a title="main.DartsApp.switchPlayerStats" href="#main.DartsApp.switchPlayerStats">switchPlayerStats</a></code></li>
+<li><code><a title="main.DartsApp.updatePlayerLists" href="#main.DartsApp.updatePlayerLists">updatePlayerLists</a></code></li>
+<li><code><a title="main.DartsApp.updateSM" href="#main.DartsApp.updateSM">updateSM</a></code></li>
+<li><code><a title="main.DartsApp.updateSectorStatScreen" href="#main.DartsApp.updateSectorStatScreen">updateSectorStatScreen</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.DartsGame" href="#main.DartsGame">DartsGame</a></code></h4>
+<ul class="">
+<li><code><a title="main.DartsGame.show_popup" href="#main.DartsGame.show_popup">show_popup</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.GameScreen" href="#main.GameScreen">GameScreen</a></code></h4>
+<ul class="">
+<li><code><a title="main.GameScreen.currDart" href="#main.GameScreen.currDart">currDart</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.GameStatsScreen" href="#main.GameStatsScreen">GameStatsScreen</a></code></h4>
+<ul class="">
+<li><code><a title="main.GameStatsScreen.statText" href="#main.GameStatsScreen.statText">statText</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.HomeScreen" href="#main.HomeScreen">HomeScreen</a></code></h4>
+</li>
+<li>
+<h4><code><a title="main.ProfilePopup" href="#main.ProfilePopup">ProfilePopup</a></code></h4>
+<ul class="">
+<li><code><a title="main.ProfilePopup.changeTextBack" href="#main.ProfilePopup.changeTextBack">changeTextBack</a></code></li>
+<li><code><a title="main.ProfilePopup.createProfile" href="#main.ProfilePopup.createProfile">createProfile</a></code></li>
+<li><code><a title="main.ProfilePopup.popupText" href="#main.ProfilePopup.popupText">popupText</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.SettingsScreen" href="#main.SettingsScreen">SettingsScreen</a></code></h4>
+</li>
+<li>
+<h4><code><a title="main.StatsScreen" href="#main.StatsScreen">StatsScreen</a></code></h4>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
