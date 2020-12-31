@@ -1,2 +1,2 @@
 # DartsGenius
-Darts app with python3 and kivy
+Darts app with python3 and kivy [kivy.org]
